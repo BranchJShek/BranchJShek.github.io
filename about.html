@@ -28,6 +28,19 @@
 
     </script>
 
+    <style type="text/css" media="screen">
+        body {
+          min-height: 1000px;
+          padding-top: 20px;
+        }
+
+        .tab {
+            font-size: 20px;
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+
     <!-- Hosted Deep Link Data -->
     <meta name="branch:deeplink:page_number" content="2"/>
     <meta name="branch:deeplink:page" content="about">
@@ -35,11 +48,11 @@
 	</head>
 	
 	<body>
- 	<nav class="site-header sticky-top py-1">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-fixed-top sticky-top">
       <div class="container d-flex flex-column flex-md-row justify-content-between branch-journeys-top" style="display:none;">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Main</a>
-        <a class="py-2 d-none d-md-inline-block" href="about.html">About</a>
-        <a class="py-2 d-none d-md-inline-block" href="info.html">Info</a>
+        <a class="py-2 d-none d-md-inline-block tab" href="index.html">Main</a>
+        <a class="py-2 d-none d-md-inline-block tab" href="about.html">About</a>
+        <a class="py-2 d-none d-md-inline-block tab" href="info.html">Info</a>
       </div>
     </nav>
 
@@ -66,6 +79,13 @@
         <div class="my-3 p-3">
           <h2 class="display-5">Info</h2>
           <p class="lead"><a href="info.html" title="Info">Click here to redirect to the Info Page.</a></p>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Docs</h2>
+          <p class="lead"><a href="https://docs.branch.io/" title="Info">Click here to redirect to the Branch docs.</a></p>
         </div>
         <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
