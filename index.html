@@ -37,7 +37,6 @@
     });
 
     const deeplink_path = 'jshek/nav_to/main'
-    var sdkLink = document.getElementById('generated3PLink');
 
     var linkData = {
                 "feature": "Email",
@@ -58,6 +57,8 @@
     branch.link(linkData, function(err, link) {
                 if (err == null) {
                     console.log(link);
+                    var sdkLink = document.getElementById('generated3PLink');
+                    sdkLink.href = link;
                 } else {
                     console.log(err);
                 }
@@ -172,9 +173,6 @@
 
 	<!-- Branch javascript -->
     <script>
-
-    console.log(sdkLink);
-    sdkLink.setAttribute('href', link);
     
     // Branch listener object that retrieves banner link data and prints it to console
     var listener = function(event, data) {
