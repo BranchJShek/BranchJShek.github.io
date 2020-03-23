@@ -63,8 +63,6 @@
                 }
             });
 
-    sdkLink.setAttribute('href', link);
-
     // --------- APP KEYS ---------
     // My Key: key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc
     // NBC Key: key_live_clvNTn0ILAmUSJwrqVDu3gebCriiIeNe
@@ -174,6 +172,8 @@
 
 	<!-- Branch javascript -->
     <script>
+
+    sdkLink.setAttribute('href', link);
     
     // Branch listener object that retrieves banner link data and prints it to console
     var listener = function(event, data) {
