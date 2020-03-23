@@ -58,11 +58,12 @@
     branch.link(linkData, function(err, link) {
                 if (err == null) {
                     console.log(link);
-                    sdkLink.setAttribute('href', link)
                 } else {
                     console.log(err);
                 }
             });
+
+    sdkLink.setAttribute('href', link);
 
     // --------- APP KEYS ---------
     // My Key: key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc
