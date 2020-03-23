@@ -36,6 +36,32 @@
         }
     });
 
+    var linkData = {
+                "feature": "Email",
+                "channel": 'channel',
+                "data": {
+                    "$ios_url": 'ios',
+                    "$android_url": 'android',
+                    "$desktop_url": 'original_url',
+                    "$fallback_url": 'original_url',
+                    "$canonical_url": 'original_url',
+                    "$og_title" : "Nike",
+                    "$uri_redirect_mode":2,
+                    "$3p":"e_salesforce2",
+                    "$deeplink_path":'deeplink_path'
+                }
+            };
+
+    branch.link(linkData, function(err, link) {
+                if (err == null) {
+                    console.log(link);
+                    document.getElementById('generated3PLink').value = link;
+                } else {
+                    console.log(err);
+                    document.getElementById('generated3PLink').value = err;
+                }
+            });
+
     // --------- APP KEYS ---------
     // My Key: key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc
     // NBC Key: key_live_clvNTn0ILAmUSJwrqVDu3gebCriiIeNe
@@ -92,7 +118,7 @@
         <div class="my-3 py-3">
           <h2 class="display-5">About</h2>
           <p class="lead"><a href="about.html" title="About">Click here to redirect to the About Page.</a></p>
-          <a href="https://jshek.app.link/stamplink">Stamp Link</a>
+          <a id='generated3PLink'>Stamp Link</a>
         </div>
         <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
