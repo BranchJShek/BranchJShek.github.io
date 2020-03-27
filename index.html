@@ -112,7 +112,8 @@
           <p class="lead"><a href="about.html" title="About">Click here to redirect to the About Page.</a></p>
           <a id='generated3PLink' href="https://www.google.com">Stamp Link</a>
           <a href="https://branchjshek.github.io/amp/amp.html">AMP Demo Site</a>
-          <a onClick="identityCheck()">setIdentity</a>
+          <br>
+          <div id='setIdentity' onClick="identityCheck()">setIdentity</div>
         </div>
         <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
       </div>
@@ -166,10 +167,10 @@
 	<!-- Branch javascript -->
     <script>
 
-    var identityCheck = function(err, data) {
+    function identityCheck() {
         const testId = 'abc123';
         branch.setIdentity(testId);
-        console.log("Identity is " + testId);
+        document.getElementById('setIdentity').innerText = testId;
     }
     
     // Branch listener object that retrieves banner link data and prints it to console
