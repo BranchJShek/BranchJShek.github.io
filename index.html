@@ -27,6 +27,7 @@
     // .init call to launch banner
     branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL', 
         {'make_new_link': false},
+        branch.setIdentity("test123"),
         {
             metadata: {
                 'jon' : 'shek',
@@ -171,6 +172,7 @@
         const testId = 'abc123';
         branch.setIdentity(testId);
         document.getElementById('setIdentity').innerText = testId;
+        branch.logEvent('pageview',{id:testId})
     }
     
     // Branch listener object that retrieves banner link data and prints it to console
