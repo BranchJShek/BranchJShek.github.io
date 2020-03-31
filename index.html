@@ -64,6 +64,27 @@
     // BMF key: key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL
     // VSCO key: key_live_fgFkpjXwHs405M7eQv9fpbjkBEidTTkL
 
+    // log commerce event to see if revenue metadata shows for non-Purchase event
+    var commerceData = {
+       "transaction_id": "trans_id_123",
+       "currency": "USD",
+       "revenue": 180.2,
+       "shipping": 10.5,
+       "tax": 13.5,
+       "description": "Logging commerce event to see if revenue metadata shows for non-Purchase event",
+       "purchase_loc": "Palo Alto",
+       "store_pickup": "unavailable"
+    }; 
+
+    var customer_event_alias = "non-Purchase Event";
+
+    function revenueTrack() {
+        branch.logEvent("Test Revenue Event"),
+        commerceData,
+        customer_event_alias,
+        console.log("Event Tracked")
+    };
+
     </script>
 
     <!-- Hosted Deep Link Data -->
@@ -248,26 +269,6 @@
         });
     }
 
-   // log commerce event to see if revenue metadata shows for non-Purchase event
-   var commerceData = {
-       "transaction_id": "trans_id_123",
-       "currency": "USD",
-       "revenue": 180.2,
-       "shipping": 10.5,
-       "tax": 13.5,
-       "description": "Logging commerce event to see if revenue metadata shows for non-Purchase event",
-       "purchase_loc": "Palo Alto",
-       "store_pickup": "unavailable"
-    }; 
-
-    var customer_event_alias = "non-Purchase Event";
-
-    function revenueTrack() {
-        branch.logEvent("Test Revenue Event"),
-        commerceData,
-        customer_event_alias,
-        console.log("Event Tracked")
-    };
     </script>
 
 	</body>
