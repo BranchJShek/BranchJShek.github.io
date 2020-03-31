@@ -25,7 +25,7 @@
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
 
     // .init call to launch banner
-    branch.init('key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL', 
+    branch.init('key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc', 
         {'make_new_link': false},
         branch.setIdentity("test123"),
         {
@@ -62,6 +62,7 @@
     // Evan key: key_live_bbIKxtk2if4dPnfQHYyVCoapADcFZTi3
     // Forever 21 key: key_live_ndSw7CiQBuZ6oUUPgxQ99ijgyEeZy5Ji
     // BMF key: key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL
+    // VSCO key: key_live_fgFkpjXwHs405M7eQv9fpbjkBEidTTkL
 
     </script>
 
@@ -112,7 +113,10 @@
           <h2 class="display-5">About</h2>
           <p class="lead"><a href="about.html" title="About">Click here to redirect to the About Page.</a></p>
           <a id='generated3PLink' href="https://www.google.com">Stamp Link</a>
+          <br>
           <a href="https://branchjshek.github.io/amp/amp.html">AMP Demo Site</a>
+          <br>
+          <a href="#" onclick="revenueTrack()">Track Revenue Event</a>
           <br>
           <div id='setIdentity' onClick="identityCheck()">setIdentity</div>
         </div>
@@ -244,6 +248,26 @@
         });
     }
 
+   // log commerce event to see if revenue metadata shows for non-Purchase event
+   var commerceData = {
+       "transaction_id": "trans_id_123",
+       "currency": "USD",
+       "revenue": 180.2,
+       "shipping": 10.5,
+       "tax": 13.5,
+       "description": "Logging commerce event to see if revenue metadata shows for non-Purchase event",
+       "purchase_loc": "Palo Alto",
+       "store_pickup": "unavailable"
+    }; 
+
+    var customer_event_alias = "non-Purchase Event";
+
+    function revenueTrack() {
+        branch.logEvent("Test Revenue Event"),
+        commerceData,
+        customer_event_alias,
+        console.log("Event Tracked")
+    };
     </script>
 
 	</body>
