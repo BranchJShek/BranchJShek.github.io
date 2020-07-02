@@ -225,6 +225,16 @@
       var tag4 = document.getElementById('tag4').textContent;
       var tag5 = document.getElementById('tag5').textContent;
       var tag6 = document.getElementById('tag6').textContent;
+      var tag7 = document.getElementById('tag7').textContent;
+      var tag8 = document.getElementById('tag8').textContent;
+      var tag9 = document.getElementById('tag9').textContent;
+      var tag10 = document.getElementById('tag10').textContent;
+      var tag11 = document.getElementById('tag11').textContent;
+      var tag12 = document.getElementById('tag12').textContent;
+      var tag13 = document.getElementById('tag13').textContent;
+      var tag14 = document.getElementById('tag14').textContent;
+      var tag15 = document.getElementById('tag15').textContent;
+      var tag16 = document.getElementById('tag16').textContent;
 
       // Checkboxes 
       var box1 = document.getElementById('box1');
@@ -233,9 +243,19 @@
       var box4 = document.getElementById('box4');
       var box5 = document.getElementById('box5');
       var box6 = document.getElementById('box6');
+      var box7 = document.getElementById('box7');
+      var box8 = document.getElementById('box8');
+      var box9 = document.getElementById('box9');
+      var box10 = document.getElementById('box10');
+      var box11 = document.getElementById('box11');
+      var box12 = document.getElementById('box12');
+      var box13 = document.getElementById('box13');
+      var box14 = document.getElementById('box14');
+      var box15 = document.getElementById('box15');
+      var box16 = document.getElementById('box16');
 
-      var tagsArray = [tag1, tag2, tag3, tag4, tag5, tag6]
-      var checkboxArray = [box1, box2, box3, box4, box5, box6]
+      var tagsArray = [tag1, tag2, tag3, tag4, tag5, tag6, tag7, tag8, tag9, tag10, tag11, tag12, tag13, tag14, tag15, tag16]
+      var checkboxArray = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16]
 
       var domLinkData = {
         tags: [],
@@ -337,14 +357,34 @@
                     <p>What campaign is it part of? (utm_campaign)</p>
                     <input type="text" id="campaign" class="form-control" value=""/>
                   </label>
-                  <label>Channel (Recommended):
+                  <form>
+                    <label for="channel">Channel (Recommended)</label>
                     <p>Where will you post this link? (utm_source) - Facebook, Instagram, Twitter, etc.</p>
-                    <input type="text" id="channel" class="form-control" value=""/>
-                  </label>
-                  <label>Feature (Recommended):
+                    <select name="channel" id="channel">
+                      <option value="" selected></option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="Instagram Stories">Instagram Stories</option>
+                      <option value="Instagram Bio">Instagram Bio</option>
+                      <option value="Display">Display</option>
+                      <option value="Institutional">Institutional</option>
+                      <option value="Email">Email</option>
+                      <option value="PMB Facebook">PMB Facebook</option>
+                      <option value="PMB Instagram">PMB Instagram</option>
+                      <option value="PMB Twitter">PMB Twitter</option>
+                      <option value="PMB">PMB FBIG</option>
+                    </select>
+                  </form>
+                  <form>
+                    <label for="feature">Feature (Recommended)</label>
                     <p>What feature will you use this link for? (utm_medium)</p>
-                    <input type="text" id="feature" class="form-control" value=""/>
-                  </label>
+                    <select name="channel" id="channel">
+                      <option value="" selected></option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Paid Marketing">Paid Marketing</option>
+                    </select>
+                  </form>
+                  <br>
                   <label>Stage (Optional):
                     <p>Example: home-page</p>
                     <input type="text" id="stage" class="form-control" value=""/>
@@ -520,15 +560,63 @@
               </h3>
             </div>
             <div id="tags" class="collapse">
-              <div class="panel-body">
+              <div class="panel-heading">
                 <form>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box1" value="marketing">
                     <span id="tag1">marketing</span>
                   </label>
                   <label class="checkbox-inline">
+                    <input type="checkbox" id="box13" value="email">
+                    <span id="tag13">email</span>
+                  </label>
+                  <label class="checkbox-inline">
                     <input type="checkbox" id="box2" value="organicsocial">
                     <span id="tag2">organicsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box8" value="paidsocial">
+                    <span id="tag8">paidsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box7" value="socialowned">
+                    <span id="tag7">socialowned</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box6" value="facebook">
+                    <span id="tag6">facebook</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box10" value="twitter">
+                    <span id="tag10">twitter</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box11" value="instagramstories">
+                    <span id="tag11">instagramstories</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box12" value="instagrambio">
+                    <span id="tag12">instagrambio</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box9" value="@NBA">
+                    <span id="tag9">@NBA</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box14" value="leaguepass">
+                    <span id="tag14">leaguepass</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box15" value="domestic">
+                    <span id="tag15">domestic</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box16" value="international">
+                    <span id="tag16">international</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box3" value="appdownload">
@@ -541,12 +629,6 @@
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box5" value="schedulerelease">
                     <span id="tag5">schedulerelease</span>
-                  </label>
-                </form>
-                <form>
-                  <label class="checkbox-inline-2">
-                    <input type="checkbox" id="box6" value="facebook">
-                    <span id="tag6">facebook</span>
                   </label>
                 </form>
               </div>
