@@ -36,33 +36,6 @@
         }
     });
 
-    var linkData = {
-                "feature": "Email",
-                "channel": 'channel',
-                "data": {
-                }
-            };
-
-    branch.link(linkData, function(err, link) {
-                if (err == null) {
-                    console.log(link);
-                    var sdkLink = document.getElementById('generated3PLink');
-                    sdkLink.href = link;
-                } else {
-                    console.log(err);
-                }
-            });
-
-    // --------- APP KEYS ---------
-    // My Key: key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc
-    // NBC Key: key_live_clvNTn0ILAmUSJwrqVDu3gebCriiIeNe
-    // Medium Key: key_live_ofxXr2qTrrU9NqURK8ZwEhknBxiI6KBm
-    // Belk Key: key_live_anwQqdo62sYLUAY3H6ZKnoebquidZDyo
-    // Evan key: key_live_bbIKxtk2if4dPnfQHYyVCoapADcFZTi3
-    // Forever 21 key: key_live_ndSw7CiQBuZ6oUUPgxQ99ijgyEeZy5Ji
-    // BMF key: key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL
-    // VSCO key: key_live_fgFkpjXwHs405M7eQv9fpbjkBEidTTkL
-
     // log commerce event to see if revenue metadata shows for non-Purchase event
     var commerceData = {
      "transaction_id": "trans_id_123",
@@ -120,6 +93,7 @@
         <p class="lead font-weight-normal">
           This is the Main Page.
         </p>
+        <a href="https://branchjshek.github.io/nbalinkcreator">NBA Link Creator</a>
       </div>
       <div class="product-device box-shadow d-none d-md-block"></div>
       <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -130,11 +104,8 @@
         <div class="my-3 py-3">
           <h2 class="display-5">About</h2>
           <p class="lead"><a href="about.html" title="About">Click here to redirect to the About Page.</a></p>
-          <a id='generated3PLink' href="https://www.google.com">Stamp Link</a>
           <br>
           <a href="https://branchjshek.github.io/amp/amp.html">AMP Demo Site</a>
-          <br>
-          <a href="#" onclick="revenueTrack()">Track Revenue Event</a>
           <br>
           <div id='setIdentity' onClick="identityCheck()">setIdentity</div>
         </div>
