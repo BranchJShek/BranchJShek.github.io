@@ -203,12 +203,14 @@
       var player = document.getElementById('playerName').value;
 
       // Social Media
-      var ogTitle = document.getElementById('og_title').value;
-      var ogDescription = document.getElementById('og_description').value;
-      var ogImage = document.getElementById('og_image').value;
-      var ogUrl = document.getElementById('og_url').value;
-      var ogVideo = document.getElementById('og_video').value;
-      var ogType = document.getElementById('og_type').value;
+      var ogTitle = document.getElementById('$og_title');
+      var ogDescription = document.getElementById('$og_description');
+      var ogImage = document.getElementById('$og_image');
+      var ogUrl = document.getElementById('$og_url');
+      var ogVideo = document.getElementById('$og_video');
+      var ogType = document.getElementById('$og_type');
+
+      var ogTagArray = [ogTitle, ogDescription, ogImage, ogUrl, ogVideo, ogType]
 
       var routingUrl = "";
 
@@ -219,22 +221,22 @@
       };
 
       // Tags 
-      var tag1 = document.getElementById('tag1').textContent;
-      var tag2 = document.getElementById('tag2').textContent;
-      var tag3 = document.getElementById('tag3').textContent;
-      var tag4 = document.getElementById('tag4').textContent;
-      var tag5 = document.getElementById('tag5').textContent;
-      var tag6 = document.getElementById('tag6').textContent;
-      var tag7 = document.getElementById('tag7').textContent;
-      var tag8 = document.getElementById('tag8').textContent;
-      var tag9 = document.getElementById('tag9').textContent;
-      var tag10 = document.getElementById('tag10').textContent;
-      var tag11 = document.getElementById('tag11').textContent;
-      var tag12 = document.getElementById('tag12').textContent;
-      var tag13 = document.getElementById('tag13').textContent;
-      var tag14 = document.getElementById('tag14').textContent;
-      var tag15 = document.getElementById('tag15').textContent;
-      var tag16 = document.getElementById('tag16').textContent;
+      var tag1 = document.getElementById('marketingTag').textContent;
+      var tag2 = document.getElementById('emailTag').textContent;
+      var tag3 = document.getElementById('organicsocialTag').textContent;
+      var tag4 = document.getElementById('paidsocialTag').textContent;
+      var tag5 = document.getElementById('socialownedTag').textContent;
+      var tag6 = document.getElementById('facebookTag').textContent;
+      var tag7 = document.getElementById('twitterTag').textContent;
+      var tag8 = document.getElementById('instagramstoriesTag').textContent;
+      var tag9 = document.getElementById('instagrambioTag').textContent;
+      var tag10 = document.getElementById('NBATag').textContent;
+      var tag11 = document.getElementById('leaguepassTag').textContent;
+      var tag12 = document.getElementById('domesticTag').textContent;
+      var tag13 = document.getElementById('internationalTag').textContent;
+      var tag14 = document.getElementById('appdownloadTag').textContent;
+      var tag15 = document.getElementById('regionsTag').textContent;
+      var tag16 = document.getElementById('schedulereleaseTag').textContent;
 
       // Checkboxes 
       var box1 = document.getElementById('box1');
@@ -255,11 +257,12 @@
       var box16 = document.getElementById('box16');
 
       var tagsArray = [tag1, tag2, tag3, tag4, tag5, tag6, tag7, tag8, tag9, tag10, tag11, tag12, tag13, tag14, tag15, tag16]
+
       var checkboxArray = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16]
 
       var domLinkData = {
         tags: [],
-        type: 2,
+        alias: linkAlias,
         data: {
         // "section_id": sectionId,
         // "content_id": contentId,
@@ -270,29 +273,36 @@
         "$one_time_use": false,
         "$marketing_title": marketingTitle,
         "$canonical_url": routingUrl,
-        "campaign": campaign,
-        "channel": channel,
-        "feature": feature,
-        "stage": stage,
-        "alias": linkAlias
+        "~campaign": campaign,
+        "~channel": channel,
+        "~feature": feature,
+        "~stage": stage
         }
       };
 
       function addTags() {
-        for (i = 0; i < tagsArray.length; i++) {
-          if (checkboxArray[i].checked == true) {
+        for (i = 0; i < tagsArray.length; i++) 
+        {
+          if (checkboxArray[i].checked == true) 
+          {
             domLinkData["tags"].push(tagsArray[i]);  
           }
         }
         return domLinkData;
       };
 
-      addTags();
-      console.log("Tags added")
-      console.log(domLinkData)
+      function addOGTags() {
+        for (i = 0; i < ogTagArray.length; i++)
+        {
+          if (ogTagArray[i].value != undefined && ogTagArray[i].value != "")
+          {
+            domLinkData.data[ogTagArray[i].id] = ogTagArray[i].value;
+          }
+        }
+        return domLinkData;
+      };
 
-      var i;
-      for (i = 1; i <= domFieldCount; i++) {
+      for (var i = 1; i <= domFieldCount; i++) {
         var key = document.getElementById('extra_param_panel_body_dom_key_' + i).value;
         var value = document.getElementById('extra_param_panel_body_dom_value_' + i).value;
         if (key != null && key != "" && value != null) { // allowing for an empty value, but not an empty key
@@ -301,11 +311,17 @@
           domLinkData.data[key] = value;
         }
       }
+      
+      addTags();
+      addOGTags();
+
+      console.log(domLinkData);
 
       // Create Dom Link
       branch.link(domLinkData, function(err, domLink) {
         if (err == null) {
           document.getElementById('final_url').value = domLink;
+          console.log(domLink)
         }
         else {
           console.log(err, domLink);
@@ -378,7 +394,7 @@
                   <form>
                     <label for="feature">Feature (Recommended)</label>
                     <p>What feature will you use this link for? (utm_medium)</p>
-                    <select name="channel" id="channel">
+                    <select name="feature" id="feature">
                       <option value="" selected></option>
                       <option value="Marketing">Marketing</option>
                       <option value="Paid Marketing">Paid Marketing</option>
@@ -392,7 +408,7 @@
                   <label>Alias (Optional):
                     <p>Alias will be appended to the link domain (nba.app.link). For example, if you entered "test_alias",
                     we would create the following link: "https://nba.app.link/test_alias".
-                    <b>Note: link aliases may not be reused</b></p>
+                    <b>Note: link aliases may not be reused - you will see Error 409 if you attempt to reuse an alias.</b></p>
                     <input type="text" id="alias" class="form-control" value=""/>
                   </label>
               </div>
@@ -524,28 +540,28 @@
               <div class="panel-body">
                 <label>OG Title (Optional):
                   <p>Specifies a title to show if the link is posted on social media.</p>
-                  <input type="text" id="og_title" class="form-control" value=""/>
+                  <input type="text" id="$og_title" class="form-control" value=""/>
                 </label>
                 <label>OG Description (Optional):
                   <p>Specifies a description to show if the link is posted on social media.</p>
-                  <input type="text" id="og_description" class="form-control" value=""/>
+                  <input type="text" id="$og_description" class="form-control" value=""/>
                 </label>
                 <label>OG Image URL (Optional):
                   <p>Specifies an image to show if the link is posted on social media.</p>
-                  <input type="text" id="og_image" class="form-control" value=""/>
+                  <input type="text" id="$og_image" class="form-control" value=""/>
                 </label>
                 <!-- Image Upload -->
                 <label>OG Video (Optional):
                   <p>Specifies a video to show if the link is posted on social media.</p>
-                  <input type="text" id="og_video" class="form-control" value=""/>
+                  <input type="text" id="$og_video" class="form-control" value=""/>
                 </label>
                 <label>OG URL (Optional):
                   <p>Specifies a url to serve as the canonical identifier of the og info.</p>
-                  <input type="text" id="og_url" class="form-control" value=""/>
+                  <input type="text" id="$og_url" class="form-control" value=""/>
                 </label>
                 <label>OG Type (Optional):
                   <p>Specifies a type of og content (ie article, book, etc.).</p>
-                  <input type="text" id="og_type" class="form-control" value=""/>
+                  <input type="text" id="$og_type" class="form-control" value=""/>
                 </label>
               </div>
             </div>
@@ -564,71 +580,71 @@
                 <form>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box1" value="marketing">
-                    <span id="tag1">marketing</span>
+                    <span id="marketingTag">marketing</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box13" value="email">
-                    <span id="tag13">email</span>
+                    <span id="emailTag">email</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box2" value="organicsocial">
-                    <span id="tag2">organicsocial</span>
+                    <span id="organicsocialTag">organicsocial</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box8" value="paidsocial">
-                    <span id="tag8">paidsocial</span>
+                    <span id="paidsocialTag">paidsocial</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box7" value="socialowned">
-                    <span id="tag7">socialowned</span>
+                    <span id="socialownedTag">socialowned</span>
                   </label>
                 </form>
                 <form>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box6" value="facebook">
-                    <span id="tag6">facebook</span>
+                    <span id="facebookTag">facebook</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box10" value="twitter">
-                    <span id="tag10">twitter</span>
+                    <span id="twitterTag">twitter</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box11" value="instagramstories">
-                    <span id="tag11">instagramstories</span>
+                    <span id="instagramstoriesTag">instagramstories</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box12" value="instagrambio">
-                    <span id="tag12">instagrambio</span>
+                    <span id="instagrambioTag">instagrambio</span>
                   </label>
                 </form>
                 <form>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box9" value="@NBA">
-                    <span id="tag9">@NBA</span>
+                    <span id="NBATag">@NBA</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box14" value="leaguepass">
-                    <span id="tag14">leaguepass</span>
+                    <span id="leaguepassTag">leaguepass</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box15" value="domestic">
-                    <span id="tag15">domestic</span>
+                    <span id="domesticTag">domestic</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box16" value="international">
-                    <span id="tag16">international</span>
+                    <span id="internationalTag">international</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box3" value="appdownload">
-                    <span id="tag3">appdownload</span>
+                    <span id="appdownloadTag">appdownload</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box4" value="regions">
-                    <span id="tag4">regions</span>
+                    <span id="regionsTag">regions</span>
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="box5" value="schedulerelease">
-                    <span id="tag5">schedulerelease</span>
+                    <span id="schedulereleaseTag">schedulerelease</span>
                   </label>
                 </form>
               </div>
