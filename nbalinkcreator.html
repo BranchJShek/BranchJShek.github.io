@@ -306,7 +306,7 @@
       function addOGTags() {
         for (i = 0; i < ogTagArray.length; i++)
         {
-          if (ogTagArray[i].value != undefined || ogTagArray[i].value != "")
+          if (ogTagArray[i].value != undefined || ogTagArray[i].value != "" || ogTagArray[i].value != null)
           {
             domLinkData.data[ogTagArray[i].id] = ogTagArray[i].value;
           }
