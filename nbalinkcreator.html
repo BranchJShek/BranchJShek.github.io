@@ -220,6 +220,38 @@
          routingUrl = canonicalURL;
       };
 
+      var domLinkData = {
+        tags: [],
+        alias: linkAlias,
+        "data": {
+        "$one_time_use": false,
+        "$marketing_title": marketingTitle,
+        "$canonical_url": routingUrl,
+        "$fallback_url": fallback,
+        "~campaign": campaign,
+        "~channel": channel,
+        "~feature": feature,
+        "~stage": stage
+        }
+      };
+
+      function removeEmptyFields() {
+        var keys = Object.keys(domLinkData.data);
+        var values = Object.values(domLinkData.data);
+
+        // if no values entered, remove key 
+        for (k = 0; k < keys.length; k++)
+        {
+          if (values[k] == "")
+          {
+            delete domLinkData.data[keys[k]];
+          }
+        }
+        return domLinkData;
+      };
+
+      removeEmptyFields();
+
       // Tags 
       var tag1 = document.getElementById('marketingTag').textContent;
       var tag2 = document.getElementById('emailTag').textContent;
@@ -259,26 +291,6 @@
       var tagsArray = [tag1, tag2, tag3, tag4, tag5, tag6, tag7, tag8, tag9, tag10, tag11, tag12, tag13, tag14, tag15, tag16]
 
       var checkboxArray = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16]
-
-      var domLinkData = {
-        tags: [],
-        alias: linkAlias,
-        data: {
-        // "section_id": sectionId,
-        // "content_id": contentId,
-        // "content": content,
-        // "media": media,
-        // "hashtags": hashtags,
-        // "player_name": player,
-        "$one_time_use": false,
-        "$marketing_title": marketingTitle,
-        "$canonical_url": routingUrl,
-        "~campaign": campaign,
-        "~channel": channel,
-        "~feature": feature,
-        "~stage": stage
-        }
-      };
 
       function addTags() {
         for (i = 0; i < tagsArray.length; i++) 
