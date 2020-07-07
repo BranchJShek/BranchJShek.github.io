@@ -224,14 +224,19 @@
         tags: [],
         alias: linkAlias,
         "data": {
-        "$one_time_use": false,
-        "$marketing_title": marketingTitle,
-        "$canonical_url": routingUrl,
-        "$fallback_url": fallback,
-        "~campaign": campaign,
-        "~channel": channel,
-        "~feature": feature,
-        "~stage": stage
+          "$one_time_use": false,
+          "$marketing_title": marketingTitle,
+          "$canonical_url": routingUrl,
+          "$fallback_url": fallback,
+          "~campaign": campaign,
+          "~channel": channel,
+          "~feature": feature,
+          "~stage": stage,
+          "team": teamName,
+          "media": media,
+          "time": time,
+          "date": postDate,
+          "player": player
         }
       };
 
@@ -457,13 +462,13 @@
                   Additional Fields
                 </a>
               </h3>
-              <small><b>Currently Disabled - ping jon.shek@branch.io to enable/update</b></small>
             </div>
             <div id="add_fields" class="collapse">
               <div class="panel-body">
             <label>Team Name (Optional):
                     <p>Which team is this link associated with?</p>
                     <select class="form-control custom-select" id="team_name_selector">
+                      <option value="" selected></option>
                       <option value="nba">NBA</option>
                       <optgroup label="East"></optgroup>
                       <option value="bucks">Bucks</option>
@@ -502,6 +507,7 @@
                   <label>Content (Optional):
                     <p>What type of content is this link associated with?</p>
                     <select class="form-control custom-select" id="content_selector">
+                      <option value="" selected></option>
                       <option value="player">Player</option>
                       <option label="gameday">Gameday</option>
                       <option value="league_pass">League Pass</option>
@@ -513,6 +519,7 @@
                   <label>Media (Optional):
                     <p>What media type is this link associated with?</p>
                     <select class="form-control custom-select" id="media_selector">
+                      <option value="" selected></option>
                       <option value="image">Image</option>
                       <option label="video">Video</option>
                     </select>
@@ -520,6 +527,7 @@
                   <label>Time (Optional):
                     <p>What part of the seaason is this link associated with?</p>
                     <select class="form-control custom-select" id="time_selector">
+                      <option value="" selected></option>
                       <option value="off_season">Off Season</option>
                       <option label="preseason">Preseason</option>
                       <option value="regular_season">Regular Season</option>
