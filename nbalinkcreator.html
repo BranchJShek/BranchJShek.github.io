@@ -188,7 +188,8 @@
       var channel = document.getElementById('channel').value;
       var feature = document.getElementById('feature').value;
       var stage = document.getElementById('stage').value;
-      var linkAlias = document.getElementById('alias').value
+      var linkAlias = document.getElementById('alias').value;
+      var webonly = document.getElementById('webonly').value;
 
       // Link Routing
       var canonicalURL = document.getElementById('canonicalURL').value;
@@ -236,7 +237,8 @@
           "media": media,
           "time": time,
           "date": postDate,
-          "player": player
+          "player": player,
+          "$web_only": webonly
         }
       };
 
@@ -469,6 +471,16 @@
                     <b>Note: link aliases may not be reused - you will see Error 409 if you attempt to reuse an alias.</b></p>
                     <input type="text" id="alias" class="form-control" value=""/>
                   </label>
+                  <form action="" method="get" accept-charset="utf-8">
+                    <label>Web Only?
+                    <p>Should this link bring users to the .com page or into the app?</p>
+                    <select name="webonly" id="webonly">
+                      <option value="" selected></option>
+                      <option value="true">Yes - send users to the .com page</option>
+                      <option value="">No - send users to the in-app page</option>
+                    </select>
+                  </label>
+                  </form>
               </div>
             </div>
           </div>
