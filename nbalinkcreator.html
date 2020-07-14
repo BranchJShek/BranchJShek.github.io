@@ -258,22 +258,37 @@
       removeEmptyFields();
 
       // Tags 
-      var tag1 = document.getElementById('marketingTag').textContent;
-      var tag2 = document.getElementById('emailTag').textContent;
-      var tag3 = document.getElementById('organicsocialTag').textContent;
-      var tag4 = document.getElementById('paidsocialTag').textContent;
-      var tag5 = document.getElementById('socialownedTag').textContent;
-      var tag6 = document.getElementById('facebookTag').textContent;
-      var tag7 = document.getElementById('twitterTag').textContent;
-      var tag8 = document.getElementById('instagramstoriesTag').textContent;
-      var tag9 = document.getElementById('instagrambioTag').textContent;
-      var tag10 = document.getElementById('NBATag').textContent;
-      var tag11 = document.getElementById('leaguepassTag').textContent;
-      var tag12 = document.getElementById('domesticTag').textContent;
-      var tag13 = document.getElementById('internationalTag').textContent;
-      var tag14 = document.getElementById('appdownloadTag').textContent;
-      var tag15 = document.getElementById('regionsTag').textContent;
-      var tag16 = document.getElementById('schedulereleaseTag').textContent;
+      var tag1 = document.getElementById('NBATag').textContent;
+      var tag2 = document.getElementById('asTag').textContent;
+      var tag3 = document.getElementById('asdTag').textContent;
+      var tag4 = document.getElementById('appdownloadTag').textContent;
+      var tag5 = document.getElementById('bfTag').textContent;
+      var tag6 = document.getElementById('domesticTag').textContent;
+      var tag7 = document.getElementById('emailTag').textContent;
+      var tag8 = document.getElementById('facebookTag').textContent;
+      var tag9 = document.getElementById('finalsTag').textContent;
+      var tag10 = document.getElementById('hfTag').textContent;
+      var tag11 = document.getElementById('ilbTag').textContent;
+      var tag12 = document.getElementById('instagrambioTag').textContent;
+      var tag13 = document.getElementById('instagramstoriesTag').textContent;
+      var tag14 = document.getElementById('internationalTag').textContent;
+      var tag15 = document.getElementById('leaguepassTag').textContent;
+      var tag16 = document.getElementById('marketingTag').textContent;
+      var tag17 = document.getElementById('msfTag').textContent;
+      var tag18 = document.getElementById('nbadraftTag').textContent;
+      var tag19 = document.getElementById('onsaleTag').textContent;
+      var tag20 = document.getElementById('organicsocialTag').textContent;
+      var tag21 = document.getElementById('paidsocialTag').textContent;
+      var tag22 = document.getElementById('playoffsTag').textContent;
+      var tag23 = document.getElementById('preseasonTag').textContent;
+      var tag24 = document.getElementById('rttpTag').textContent;
+      var tag25 = document.getElementById('regionsTag').textContent;
+      var tag26 = document.getElementById('restartTag').textContent;
+      var tag27 = document.getElementById('schedulereleaseTag').textContent;
+      var tag28 = document.getElementById('socialownedTag').textContent;
+      var tag29 = document.getElementById('sosTag').textContent;
+      var tag30 = document.getElementById('triviaTag').textContent;
+      var tag31 = document.getElementById('twitterTag').textContent;
 
       // Checkboxes 
       var box1 = document.getElementById('box1');
@@ -292,10 +307,36 @@
       var box14 = document.getElementById('box14');
       var box15 = document.getElementById('box15');
       var box16 = document.getElementById('box16');
+      var box17 = document.getElementById('box17');
+      var box18 = document.getElementById('box18');
+      var box19 = document.getElementById('box19');
+      var box20 = document.getElementById('box20');
+      var box21 = document.getElementById('box21');
+      var box22 = document.getElementById('box22');
+      var box23 = document.getElementById('box23');
+      var box24 = document.getElementById('box24');
+      var box25 = document.getElementById('box25');
+      var box26 = document.getElementById('box26');
+      var box27 = document.getElementById('box27');
+      var box28 = document.getElementById('box28');
+      var box29 = document.getElementById('box29');
+      var box30 = document.getElementById('box30');
+      var box31 = document.getElementById('box31');
 
-      var tagsArray = [tag1, tag2, tag3, tag4, tag5, tag6, tag7, tag8, tag9, tag10, tag11, tag12, tag13, tag14, tag15, tag16]
+      var tagsArray = [tag1, tag2, tag3, tag4, tag5, 
+                      tag6, tag7, tag8, tag9, tag10, 
+                      tag11, tag12, tag13, tag14, tag15, 
+                      tag16, tag17, tag18, tag19, tag20,
+                      tag21, tag22, tag23, tag24, tag25,
+                      tag26, tag27, tag28, tag29, tag30,
+                      tag31]
 
-      var checkboxArray = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16]
+      var checkboxArray = [box1, box2, box3, box4, box5, 
+                          box6, box7, box8, box9, box10, box11, 
+                          box12, box13, box14, box15, box16,
+                          box17, box18, box19, box20, box21,
+                          box22, box23, box24, box25, box26,
+                          box27, box28, box29, box30, box31]
 
       function addTags() {
         for (i = 0; i < tagsArray.length; i++) 
@@ -600,78 +641,139 @@
               <div class="panel-heading">
                 <form>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box1" value="marketing">
-                    <span id="marketingTag">marketing</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box2" value="email">
-                    <span id="emailTag">email</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box3" value="organicsocial">
-                    <span id="organicsocialTag">organicsocial</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box4" value="paidsocial">
-                    <span id="paidsocialTag">paidsocial</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box5" value="socialowned">
-                    <span id="socialownedTag">socialowned</span>
-                  </label>
-                </form>
-                <form>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box6" value="facebook">
-                    <span id="facebookTag">facebook</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box7" value="twitter">
-                    <span id="twitterTag">twitter</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box8" value="instagramstories">
-                    <span id="instagramstoriesTag">instagramstories</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box9" value="instagrambio">
-                    <span id="instagrambioTag">instagrambio</span>
-                  </label>
-                </form>
-                <form>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box10" value="@NBA">
+                    <input type="checkbox" id="box1" value="@NBA">
                     <span id="NBATag">@NBA</span>
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box11" value="leaguepass">
-                    <span id="leaguepassTag">leaguepass</span>
+                    <input type="checkbox" id="box2" value="regions">
+                    <span id="asTag">all star</span>
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box12" value="domestic">
-                    <span id="domesticTag">domestic</span>
+                    <input type="checkbox" id="box3" value="schedulerelease">
+                    <span id="asdTag">all star draft</span>
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box13" value="international">
-                    <span id="internationalTag">international</span>
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="box14" value="appdownload">
+                    <input type="checkbox" id="box4" value="appdownload">
                     <span id="appdownloadTag">appdownload</span>
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box15" value="regions">
+                    <input type="checkbox" id="box5" value="leaguepass">
+                    <span id="bfTag">black friday</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box6" value="domestic">
+                    <span id="domesticTag">domestic</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box7" value="email">
+                    <span id="emailTag">email</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box8" value="facebook">
+                    <span id="facebookTag">facebook</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box9" value="@NBA">
+                    <span id="finalsTag">finals</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box10" value="domestic">
+                    <span id="hfTag">holiday free trial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box11" value="domestic">
+                    <span id="ilbTag">inlanguagebroadcast</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box12" value="instagrambio">
+                    <span id="instagrambioTag">instagrambio</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box13" value="instagramstories">
+                    <span id="instagramstoriesTag">instagramstories</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box14" value="international">
+                    <span id="internationalTag">international</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box15" value="leaguepass">
+                    <span id="leaguepassTag">leaguepass</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box16" value="marketing">
+                    <span id="marketingTag">marketing</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box17" value="international">
+                    <span id="msfTag">mid season free trial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box18" value="leaguepass">
+                    <span id="nbadraftTag">nbadraft</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box19" value="schedulerelease">
+                    <span id="onsaleTag">onsale</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box20" value="organicsocial">
+                    <span id="organicsocialTag">organicsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box21" value="paidsocial">
+                    <span id="paidsocialTag">paidsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box22" value="schedulerelease">
+                    <span id="playoffsTag">playoffs</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box23" value="schedulerelease">
+                    <span id="preseasonTag">preseason</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box24" value="appdownload">
+                    <span id="rttpTag">race to the playoffs</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box25" value="regions">
                     <span id="regionsTag">regions</span>
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="box16" value="schedulerelease">
+                    <input type="checkbox" id="box26" value="schedulerelease">
+                    <span id="restartTag">restart</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box27" value="schedulerelease">
                     <span id="schedulereleaseTag">schedulerelease</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box28" value="socialowned">
+                    <span id="socialownedTag">socialowned</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box29" value="@NBA">
+                    <span id="sosTag">sos</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box30" value="international">
+                    <span id="triviaTag">trivia</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box31" value="twitter">
+                    <span id="twitterTag">twitter</span>
                   </label>
                 </form>
               </div>
             </div>
           </div>
-
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
