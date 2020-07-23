@@ -302,7 +302,7 @@
         var hashtags = document.getElementById('hashtags').value;
         var player = document.getElementById('playerName').value;
 
-        if ( (intFallback == null || intFallback == "") & tricodeMap[teamName] != "nba"){
+        if ( (intFallback == null || intFallback == "") & tricodeMap[teamName] != "nba") {
           intFallback = "https://www.nba.com/" + teamName.toLowerCase() + "/leaguepass/pricing";
         }
 
@@ -341,6 +341,7 @@
 
         if (fallbackInternationalWeb !== null && fallbackInternationalWeb !== "") {
           internationalLinkData.data["$desktop_url"] = fallbackInternationalWeb;
+          internationalLinkData.data["$canonical_url"] = fallbackInternationalWeb;
         } else {
           internationalLinkData.data["$canonical_url"] = defaultCanonical;
         }
@@ -358,7 +359,6 @@
         // Create International Link
         branch.link(internationalLinkData, function(err, internationalLink) {
 
-          console.log("International Link Data:" + internationalLinkData);
           console.log(internationalLink);
 
           // Create Domestic Link
@@ -460,8 +460,7 @@
             console.log(err, internationalLink);
             document.getElementById('final_url').value = err;
           }
-        });
-      }
+        )};
     </script>
   </head>
 
