@@ -335,11 +335,9 @@
         }
 
         if (intFallback !== null && intFallback !== "") {
-            internationalLinkData.data["$fallback_url"] = intFallback;
-            internationalLinkData.data["$canonical_url"] = intFallback;
-        }
-
-        if (fallbackInternationalWeb !== null && fallbackInternationalWeb !== "") {
+          internationalLinkData.data["$fallback_url"] = intFallback;
+          internationalLinkData.data["$canonical_url"] = intFallback;
+        } else if (fallbackInternationalWeb !== null && fallbackInternationalWeb !== "") {
           internationalLinkData.data["$desktop_url"] = fallbackInternationalWeb;
           internationalLinkData.data["$canonical_url"] = fallbackInternationalWeb;
         } else {
@@ -411,9 +409,7 @@
             if (domFallbackUS != null && domFallbackUS !== "") {
               domesticLinkData.data["$fallback_url_us"] = domFallbackUS;
               domesticLinkData.data["$canonical_url"] = domFallbackUS;
-            }
-
-            if (domDesktopWeb !== null && domDesktopWeb !== "") {
+            } else if (domDesktopWeb !== null && domDesktopWeb !== "") {
               domesticLinkData.data["$desktop_url"] = domDesktopWeb;
               domesticLinkData.data["$canonical_url"] = domDesktopWeb;
             } else {
