@@ -408,22 +408,23 @@
               }
             }
 
-            if (domFallbackUS != null && domFallbackUS != "") {
+            if (domFallbackUS != null && domFallbackUS !== "") {
               domesticLinkData.data["$fallback_url_us"] = domFallbackUS;
               domesticLinkData.data["$canonical_url"] = domFallbackUS;
+            }
 
-            if (domDesktopWeb !== null && domDesktopWeb != "") {
+            if (domDesktopWeb !== null && domDesktopWeb !== "") {
               domesticLinkData.data["$desktop_url"] = domDesktopWeb;
               domesticLinkData.data["$canonical_url"] = domDesktopWeb;
             } else {
               domesticLinkData.data["$canonical_url"] = defaultCanonical;
             }
 
-            if (domIOSWeb !== null && domIOSWeb != "") {
+            if (domIOSWeb !== null && domIOSWeb !== "") {
               domesticLinkData.data["$ios_url"] = domIOSWeb;
             }
 
-            if (domAndroidWeb !== null && domAndroidWeb != "") {
+            if (domAndroidWeb !== null && domAndroidWeb !== "") {
               domesticLinkData.data["$android_url"] = domAndroidWeb;
             }
 
