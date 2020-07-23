@@ -426,21 +426,7 @@
 
             if (domAndroidWeb !== null && domAndroidWeb !== "") {
               domesticLinkData.data["$android_url"] = domAndroidWeb;
-            }
-
-              branch.link(domesticLinkData, function(err, domesticLink) {
-                if (err == null) {
-                  document.getElementById('final_url').value = domesticLink;
-                }
-                else {
-                  console.log(err, domesticLink);
-                  document.getElementById('final_url').value = err;
-                }
-              });
-            
-            } else {
-              domesticLinkData.data["$always_deeplink"] = "false";
-              domesticLinkData.data["$ios_deepview"] = "false";
+            } 
 
               // Create Domestic Link
               branch.link(domesticLinkData, function(err, domesticLink) {
