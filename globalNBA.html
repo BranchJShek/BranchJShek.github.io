@@ -278,7 +278,9 @@
         var fallbackInternationalWeb = document.getElementById('fallback_international_web').value;
         var fallbackInternationalIos = document.getElementById('fallback_international_ios').value;
         var fallbackInternationalAndroid = document.getElementById('fallback_international_android').value;
-        var fallbackUS = document.getElementById('fallback_us').value;
+        var intFallback = document.getElementById('int_fallback').value;
+        var domFallback = document.getElementById('dom_fallback').value;
+        var domFallbackUS = document.getElementById('dom_fallback_us').value;
         var domDesktopWeb = document.getElementById('desktop_domestic_web').value;
         var domIOSWeb = document.getElementById('ios_domestic_web').value;
         var domAndroidWeb = document.getElementById('android_domestic_web').value;
@@ -301,8 +303,8 @@
         var hashtags = document.getElementById('hashtags').value;
         var player = document.getElementById('playerName').value;
 
-        if ( (fallbackUS == null || fallbackUS == "") & tricodeMap[teamName] != "nba"){
-          fallbackUS = "https://www.nba.com/" + teamName.toLowerCase() + "/leaguepass/pricing";
+        if ( (intFallback == null || intFallback == "") & tricodeMap[teamName] != "nba"){
+          intFallback = "https://www.nba.com/" + teamName.toLowerCase() + "/leaguepass/pricing";
         }
 
         var internationalLinkData = {
@@ -333,18 +335,22 @@
           }
         }
 
-        if (fallbackInternationalWeb !== null && fallbackInternationalWeb != "") {
+        if (intFallback !== null && intFallback !== "") {
+            internationalLinkData.data["$fallback_url"] = intFallback;
+            internationalLinkData.data["$canonical_url"] = intFallback;
+        }
+
+        if (fallbackInternationalWeb !== null && fallbackInternationalWeb !== "") {
           internationalLinkData.data["$desktop_url"] = fallbackInternationalWeb;
-          internationalLinkData.data["$canonical_url"] = fallbackInternationalWeb;
         } else {
           internationalLinkData.data["$canonical_url"] = defaultCanonical;
         }
 
-        if (fallbackInternationalIos !== null && fallbackInternationalIos != "") {
+        if (fallbackInternationalIos !== null && fallbackInternationalIos !== "") {
           internationalLinkData.data["$ios_url"] = fallbackInternationalIos;
         }
 
-        if (fallbackInternationalAndroid !== null && fallbackInternationalAndroid != "") {
+        if (fallbackInternationalAndroid !== null && fallbackInternationalAndroid !== "") {
           internationalLinkData.data["$android_url"] = fallbackInternationalAndroid;
         }
 
@@ -368,6 +374,7 @@
                 campaign: campaign,
                 data: {
                 "$fallback_url": internationalLink,
+                "$fallback_url_us": domFallbackUS,
                 "deeplink": deeplinkValue,
                 "tricode": tricodeMap[teamName],
                 "$marketing_title": marketingTitle,
@@ -402,9 +409,9 @@
               }
             }
 
-            if (fallbackUS != null && fallbackUS != "") {
-              domesticLinkData.data["$fallback_url_us"] = fallbackUS;
-              domesticLinkData.data["$canonical_url"] = fallbackUS;
+            if (domFallbackUS != null && domFallbackUS != "") {
+              domesticLinkData.data["$fallback_url_us"] = domFallbackUS;
+              domesticLinkData.data["$canonical_url"] = domFallbackUS;
 
             if (domDesktopWeb !== null && domDesktopWeb != "") {
               domesticLinkData.data["$desktop_url"] = domDesktopWeb;
@@ -758,9 +765,8 @@
             <div id="fallback_fields" class="collapse">
               <div class="panel-body">
                 <label>US Web Fallback URL (Optional):
-                  <p>If the link is clicked in the US by a user without the app, where should that user go? If no value
-                  is specified, user will be taken to the App/Play Store on iOS/Android, or https://nba.com on desktop.</p>
-                  <input type="text" id="fallback_us" class="form-control" value=""/>
+                  <p>The fallback URL for International users - if you don't want users to be redirected to the App Store.<b> No need to set any of the below URLs if you set a value here.</b></p>
+                  <input type="text" id="int_fallback" class="form-control" value=""/>
                 </label>
                 <label>International Desktop Web URL (Optional):
                   <p>If the link is clicked outside of the US on a Desktop device, where should that user go? If no value
@@ -790,6 +796,10 @@
             </div>
             <div id="domestic_fields" class="collapse">
               <div class="panel-body">
+                <label>Domestic Fallback URL US (Optional):
+                  <p>The Fallback URL for Domestic users - usually the packages pricing page. <b>No need to set any of the below URLs if you set a value here.</b></p>
+                  <input type="text" id="dom_fallback_us" class="form-control" value=""/>
+                </label>
                 <label>Domestic Desktop Web URL (Optional):
                   <p>If the link is clicked in the US on a Desktop device, where should that user go? If no value is specified, user will be taken to https://nba.com on desktop.</p>
                   <input type="text" id="desktop_domestic_web" class="form-control" value=""/>
