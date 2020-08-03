@@ -180,17 +180,30 @@
         branch.init('key_live_ddEpNB63kFwdMG424MWxhbmirAlMX5V0');
 
         var tags = document.querySelectorAll('[name=tags]')
+        var extraTags = document.querySelectorAll('[name=extraTags]')
         var boxes = document.querySelectorAll('[name=box]')
 
         function addTags(linkData) {
-          for (i = 0; i < tags.length; i++) 
-          {
+          for (i = 0; i < tags.length; i++) {
             if (boxes[i].checked == true) 
             {
               linkData["tags"].push(tags[i].textContent);  
             }
           }
+
+          for (var i = 0; i < extraTags.length; i++) {
+            if (extraTags[i].value !== "" || extraTags[i].value !== undefined) {
+              linkData["tags"].push(extraTags[i].value); 
+            }
+          }
+
+          // remove empty tags
+          linkData["tags"] = linkData["tags"].filter(el => {
+            return el != null && el != '';
+          });
+
           return linkData;
+
         };
 
         var marketingTitle = document.getElementById('marketing_title').value;
@@ -480,6 +493,7 @@
                     <select name="channel" id="channel">
                       <option value="" selected></option>
                       <option value="Facebook">Facebook</option>
+                      <option value="Facebook, Twitter, Instagram">Facebook, Twitter, Instagram</option>
                       <option value="Twitter">Twitter</option>
                       <option value="Instagram Stories">Instagram Stories</option>
                       <option value="Instagram Bio">Instagram Bio</option>
@@ -656,7 +670,13 @@
                   <label class="checkbox-inline">
                     <input type="checkbox" name="box" value="twitter">
                     <span name='tags'>twitter</span>
-                  </label>
+                  </label><br><br>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
                 </form>
                </div>
              </div>
