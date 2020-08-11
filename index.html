@@ -5,13 +5,14 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="JShek Demo Page" />
+    <meta property="og:title" content="JShek Home Page" />
     <meta property="og:url" content="http://branchjshek.github.io" />
     <meta name="branch:deeplink:deeplink_path" content="jshek/nav_to/main" />
     <meta name="branch:deeplink:fallback_url" content="https://www.google.com/images" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -63,97 +64,120 @@
     <meta name="branch:deeplink:body_index" content="1">
     <meta name="branch:deeplink:color_index" content="1">
 
-    <style type="text/css" media="screen">
-    	body {
-		  min-height: 1000px;
-		  padding-top: 20px;
-		}
-
-		.tab {
-			font-size: 20px;
-			color: white;
-			text-decoration: underline;
-		}
-    </style>
-
 	</head>
 	
-	<body>
- 	<nav class="navbar navbar-expand-sm bg-dark navbar-fixed-top sticky-top">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-    	<a class="py-2 d-none d-md-inline-block tab" href="index.html">Main</a>
-    	<a class="py-2 d-none d-md-inline-block tab" href="about.html">About</a>
-    	<a class="py-2 d-none d-md-inline-block tab" href="info.html">Info</a>
+	<body class="hero-image">
+ 	<div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Home Page</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="personal.html">Contact</a>
+          </li>
+        </ul>
       </div>
     </nav>
+  </div><br>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <div class="col-md-6 p-lg-6 mx-auto my-5">
-        <h1 class="display-5 font-weight-normal">JShek's Branch Demo Site</h1>
+    <div class="position-relative p-3 p-md-5 m-md-3 text-center">
+      <div class="col-md-6 p-lg-6 mx-auto my-5 hero-text">
+        <h1 class="display-5 font-weight-normal">Branch JShek</h1>
         <p class="lead font-weight-normal">
-          This is the Main Page.
+          Home Page
         </p>
-        <a href="https://branch-makealink.github.io">Learn how to make a Branch Link!</a>
       </div>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">About</h2>
-          <a href="about.html" title="About">Click here to redirect to the About Page.</a>
-          <br>
-          <a href="https://branchjshek.github.io/amp/amp.html">AMP Demo Site</a><br>
-          <a href="https://branchjshek.github.io/text">TMTA Example</a>
-          <br>
-          <div href='#' id='setIdentity' onClick="identityCheck()">setIdentity</div>
+    <div class="card-deck text-center">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Branch Test Examples</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><a href="https://branchjshek.github.io/amp/amp.html" target="_blank">AMP Demo Site</a><br>
+        <a href="https://branchjshek.github.io/text" target="_blank">TMTA Example</a></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Examples</small>
         </div>
       </div>
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Link Creators</h2>
-          <br>
-          <a href="https://branchjshek.github.io/nbalinkcreator">NBA International Link Creator</a><br>
-          <a href="https://branchjshek.github.io/globalNBA">Global NBA Link Creator</a><br>
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Link Creators</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><a href="https://branch-makealink.github.io" target="_blank">Learn how to make a Branch link!</a></b><br><br>
+            <a href="https://branchjshek.github.io/nbalinkcreator" target="_blank">NBA International Link Creator</a><br>
+            <a href="https://branchjshek.github.io/globalNBA" target="_blank">Global NBA Link Creator</a><br>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Link Creation Tools</small>
         </div>
       </div>
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Docs</h2>
-          <p class="lead"><a href="https://docs.branch.io/" title="Info">Click here to redirect to the Branch docs.</a></p>
+      <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Reference</h5>
+          </div>
+        <div class="card-body">
+          <p class="card-text">
+            <a href="https://help.branch.io" title="Branch Docs">Branch Docs</a><br>
+            <a href="https://help.branch.io/developers-hub/docs/ios-full-reference" title="Branch iOS">Branch iOS</a><br>
+            <a href="https://help.branch.io/developers-hub/docs/android-full-reference" title="Branch Android">Branch Android</a>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Docs</small>
         </div>
       </div>
-    </div>
+    </div>  
 
     <footer class="container py-5">
       <div class="row">
-        <div class="col-6 col-md">
+        <div class="col-6 col-md-4">
           <h5>Features</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://branch.io/journeys/">Journeys</a></li>
-            <li><a class="text-muted" href="https://branch.io/universal-ads/">Universal Ads</a></li>
-            <li><a class="text-muted" href="https://branch.io/universal-email/">Universal Email</a>
+            <li><a href="https://branch.io/journeys/">Journeys</a></li>
+            <li><a href="https://branch.io/universal-ads/">Universal Ads</a></li>
+            <li><a href="https://branch.io/universal-email/">Universal Email</a>
             </li>
-        	<li><a class="text-muted" href="https://branch.io/data-feeds/">Data Feeds</a></li>
+        	<li><a href="https://branch.io/data-feeds/">Data Feeds</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
+        <div class="col-6 col-md-4">
           <h5>Resources</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://branch.io/resources/">Resource Library</a></li>
-            <li><a class="text-muted" href="https://branch.io/resources/case-study/">Case Studies</a></li>
-            <li><a class="text-muted" href="https://branch.io/resources/webinar/">Webinars</a></li>
-            <li><a class="text-muted" href="https://branch.io/resources/white-paper/">White Papers</a></li>
-            <li><a class="text-muted" href="https://blog.branch.io/">Blog</a></li>
+            <li><a href="https://branch.io/resources/">Resource Library</a></li>
+            <li><a href="https://branch.io/resources/case-study/">Case Studies</a></li>
+            <li><a href="https://branch.io/resources/webinar/">Webinars</a></li>
+            <li><a href="https://branch.io/resources/white-paper/">White Papers</a></li>
+            <li><a href="https://blog.branch.io/">Blog</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
+        <div class="col-6 col-md-4">
           <h5>About</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="https://branch.io/contact-sales/">Contact Sales</a></li>
+            <li><a href="https://branch.io/contact-sales/">Contact Sales</a></li>
           </ul>
         </div>
       </div>
+
+      <main role="main" class="container">
+
+
+
+    </main>
     </footer>
 
 	<!-- Branch javascript -->
