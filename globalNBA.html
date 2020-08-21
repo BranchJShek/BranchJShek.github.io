@@ -206,6 +206,21 @@
 
         };
 
+        function removeEmptyFields(linkData) {
+          var keys = Object.keys(linkData.data);
+          var values = Object.values(linkData.data);
+
+          // if no values entered, remove key 
+          for (var k = 0; k < keys.length; k++) {
+            if (values[k] == "")
+            {
+              delete linkData.data[keys[k]];
+            }
+          }
+
+          return linkData;
+        };
+
         var marketingTitle = document.getElementById('marketing_title').value;
         var teamName = document.getElementById('team_name_selector').value;
         var linkAlias = document.getElementById('alias').value;
@@ -290,6 +305,8 @@
 
         if (webonly !== "") { internationalLinkData.data["$web_only"] = true };
 
+        removeEmptyFields(internationalLinkData);
+
         // Create International Link
         branch.link(internationalLinkData, function(err, internationalLink) {
 
@@ -305,13 +322,11 @@
                 type: 2,
                 tags: [],
                 channel: channel,
-                alias: linkAlias,
                 campaign: campaign,
                 data: {
                 "$fallback_url": internationalLink,
                 "$fallback_url_us": domFallbackUS,
                 "deeplink": deeplinkValue,
-                "tricode": tricodeMap[teamName],
                 "$marketing_title": marketingTitle,
                 "post_date": postDate,
                 "content": content,
@@ -324,6 +339,8 @@
 
             addTags(domesticLinkData);
 
+            if (teamName !== "") { domesticLinkData.data["tricode"] = tricodeMap[teamName]};
+            if (linkAlias !== "") {domesticLinkData["alias"] = linkAlias};
             if (webonly !== "") { domesticLinkData.data["$web_only"] = true };
 
             if (ogTitle != null && ogTitle != "") { domesticLinkData.data["$og_title"] = ogTitle }
@@ -360,21 +377,21 @@
 
             if (domAndroidWeb !== null && domAndroidWeb !== "") {
               domesticLinkData.data["$android_url"] = domAndroidWeb;
-            } 
-
-              // Create Domestic Link
-              branch.link(domesticLinkData, function(err, domesticLink) {
-                if (err == null) {
-                  console.log(domesticLinkData);
-                  console.log(domesticLink);
-                  document.getElementById('final_url').value = domesticLink;
-                }
-                else {
-                  console.log(err, domesticLink);
-                  document.getElementById('final_url').value = err;
-                }
-              });
             }
+
+            removeEmptyFields(domesticLinkData) 
+
+            // Create Domestic Link
+            branch.link(domesticLinkData, function(err, domesticLink) {
+              if (err == null) {
+                document.getElementById('final_url').value = domesticLink;
+              }
+              else {
+                console.log(err, domesticLink);
+                document.getElementById('final_url').value = err;
+              }
+            });
+          }
           else {
             console.log(err, internationalLink);
             document.getElementById('final_url').value = err;
