@@ -1,132 +1,138 @@
 <html>
-  <head>
-    <title>Global NBA Link Creator</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="//branch.io/img/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="//branch.io/img/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="//branch.io/img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="//branch.io/img/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="//branch.io/img/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="//branch.io/img/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="//branch.io/img/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="//branch.io/img/favicon/apple-touch-icon-152x152.png">
+<head>
+  <title>Global NBA Link Creator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" sizes="57x57" href="//branch.io/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="//branch.io/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="//branch.io/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="//branch.io/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="//branch.io/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="//branch.io/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="//branch.io/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="//branch.io/img/favicon/apple-touch-icon-152x152.png">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
-    <style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <style>
     .page-header,
     .panel-title,
     label {
-        font-weight: lighter
+      font-weight: lighter
     }
 
     .btn,
     .page-header {
-        text-transform: uppercase
+      text-transform: uppercase
     }
 
     body {
-        font-family: "Open Sans", Helvetica, Arial;
-        background-color: #fafafa;
-        color: #444
+      font-family: "Open Sans", Helvetica, Arial;
+      background-color: #fafafa;
+      color: #444
     }
 
     label {
-        font-size: 110%
+      font-size: 110%
     }
 
     .panel-body {
-        display: grid
+      display: grid
     }
 
     .panel-header {
-        margin-top: 70px
+      margin-top: 70px
     }
 
     .page-header {
-        font-size: 300%;
-        margin-bottom: 30px
+      font-size: 300%;
+      margin-bottom: 30px
     }
 
     .panel-title {
-        font-size: 150%
+      font-size: 150%
     }
 
     .label {
-        display: inline-flex
+      display: inline-flex
     }
 
     .form-control {
-        margin-bottom: 10px;
-        height: inherit
+      margin-bottom: 10px;
+      height: inherit
     }
 
     .redactor_box,
     input.form-control,
     option,
     select {
-        border-radius: 3px;
-        border-color: #eee;
-        font-size: 16px;
-        line-height: normal;
-        margin-right: 0;
-        padding: 15px 20px;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        width: 100%;
-        color: #444;
-        font-weight: 400;
-        background: #fff
+      border-radius: 3px;
+      border-color: #eee;
+      font-size: 16px;
+      line-height: normal;
+      margin-right: 0;
+      padding: 15px 20px;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      width: 100%;
+      color: #444;
+      font-weight: 400;
+      background: #fff
     }
 
     .btn {
-        background-color: #1cadce;
-        font-weight: 700;
-        font-size: 16px;
-        display: inline-block;
-        padding: 15px 15px;
-        border-radius: 2px;
-        -moz-border-radius: 2px;
-        -webkit-border-radius: 2px;
-        color: #fff;
-        transition: background 250ms;
-        -webkit-transition: background 250ms;
-        margin: 30px auto 30px;
-        min-width: 170px
+      background-color: #1cadce;
+      font-weight: 700;
+      font-size: 16px;
+      display: inline-block;
+      padding: 15px 15px;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      color: #fff;
+      transition: background 250ms;
+      -webkit-transition: background 250ms;
+      margin: 30px auto 30px;
+      min-width: 170px
     }
 
     #final_url {
-        margin-top: 2%;
-        margin-bottom: 5%;
-        font-weight: lighter;
-        font-size: 110%
+      margin-top: 2%;
+      margin-bottom: 5%;
+      font-weight: lighter;
+      font-size: 110%
     }
 
     .navbar-brand img {
-        max-height: 40px
+      max-height: 40px
     }
 
     nav.navbar-main {
-        padding: 2px 0;
-        background-color: #2F2F2F;
-        position: fixed;
-        width: 100%;
-        z-index: 99;
-        border-radius: 0
+      padding: 2px 0;
+      background-color: #2F2F2F;
+      position: fixed;
+      width: 100%;
+      z-index: 99;
+      border-radius: 0
     }
 
     .brand {
-        margin-top: -10px
+      margin-top: -10px
     }
 
     .custom-select {
@@ -135,23 +141,27 @@
       font-size: 16px;
       font-weight: 100;
     }
+
     p {
       font-style: italic;
       font-size: 85%;
     }
+
     .extra-field {
       display: inline-flex;
     }
+
     .extra-field-input {
       margin: 10px 40px 10px 40px !important;
     }
+
     .add-field-btn {
       font-size: 12px;
     }
-    </style>
+  </style>
 
-    <script src="js/globalNBA.js"></script>
-  </head>
+  <script src="js/globalNBA.js"></script>
+</head>
 
 <body>
   <nav class="navbar navbar-default navbar-static-top navbar-main">
@@ -159,7 +169,8 @@
       <div class="navbar-header">
         <div class="navbar-brand brand">
           <a href="https://branchjshek.github.io" target="_blank" class="logo-container">
-            <div class="branch-logo"><img src="https://branch.io/img/logo_white.png" alt="BranchMetrics" title="Branch Metrics"></div>
+            <div class="branch-logo"><img src="https://branch.io/img/logo_white.png" alt="BranchMetrics"
+                title="Branch Metrics"></div>
           </a>
         </div>
       </div>
@@ -174,449 +185,467 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#basic_fields" aria-expanded="false" aria-controls="other_fields">
-              Basic Setup
-            </a>
+              <a data-toggle="collapse" data-parent="#accordion" href="#basic_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                Basic Setup
+              </a>
             </h3>
           </div>
           <div id="basic_fields" class="collapse show">
             <div class="panel-body">
               <label>Link Title (Required):
                 <p>Name of the link on the Branch Quick Links dashboard page.</p>
-                <input type="text" id="marketing_title" class="form-control" value=""/>
+                <input type="text" id="marketing_title" class="form-control" value="" />
               </label>
               <label>Team Name:
                 <p>Which team is this link associated with?</p>
                 <select class="form-control custom-select" id="team_name_selector">
                   <option value=""></option>
                   <option value="nba">NBA</option>
-                <optgroup label="East"></optgroup>
-                <option value="bucks">Bucks</option>
-                <option value="bulls">Bulls</option>
-                <option value="cavaliers">Cavaliers</option>
-                <option value="celtics">Celtics</option>
-                <option value="hawks">Hawks</option>
-                <option value="heat">Heat</option>
-                <option value="hornets">Hornets</option>
-                <option value="knicks">Knicks</option>
-                <option value="magic">Magic</option>
-                <option value="nets">Nets</option>
-                <option value="pacers">Pacers</option>
-                <option value="pistons">Pistons</option>
-                <option value="raptors">Raptors</option>
-                <option value="sixers">Sixers</option>
-                <option value="wizards">Wizards</option>
-              <optgroup label="West"></optgroup>
-              <option value="blazers">Blazers</option>
-              <option value="clippers">Clippers</option>
-              <option value="grizzlies">Grizzlies</option>
-              <option value="jazz">Jazz</option>
-              <option value="kings">Kings</option>
-              <option value="lakers">Lakers</option>
-              <option value="mavericks">Mavericks</option>
-              <option value="nuggets">Nuggets</option>
-              <option value="pelicans">Pelicans</option>
-              <option value="rockets">Rockets</option>
-              <option value="spurs">Spurs</option>
-              <option value="suns">Suns</option>
-              <option value="thunder">Thunder</option>
-              <option value="timberwolves">Timberwolves</option>
-              <option value="warriors">Warriors</option>
-            </select>
-          </label>
-          <label>Content (Required):
-            <p>What type of content is this link associated with?</p>
-            <select class="form-control custom-select" id="content_selector">
-              <option value=""></option>
-              <option value="player">Player</option>
-              <option label="gameday">Gameday</option>
-              <option value="league_pass">League Pass</option>
-              <option label="interview">Interview</option>
-              <option label="draft">Draft</option>
-              <option label="other">[Other]</option>
-            </select>
-          </label>
-          <label>Media (Required):
-            <p>What media type is this link associated with?</p>
-            <select class="form-control custom-select" id="media_selector">
-              <option value=""></option>
-              <option value="image">Image</option>
-              <option label="video">Video</option>
-            </select>
-          </label>
-          <label>Time (Required):
-            <p>What part of the seaason is this link associated with?</p>
-            <select class="form-control custom-select" id="time_selector">
-              <option value=""></option>
-              <option value="off_season">Off Season</option>
-              <option label="preseason">Preseason</option>
-              <option value="regular_season">Regular Season</option>
-              <option label="playoffs">Playoffs</option>
-              <option label="finals">Finals</option>
-              <option value="season_restart">Season Restart</option>
-            </select>
-          </label>
-          <form>
-            <label for="channel">Channel (Recommended)
-              <p>Where will you post this link? (utm_source) - Facebook, Instagram, Twitter, etc.</p>
-              <select name="channel" id="channel">
-                <option value="" selected></option>
-                <option value="Facebook">Facebook</option>
-                <option value="Facebook, Twitter, Instagram">Facebook, Twitter, Instagram</option>
-                <option value="Twitter">Twitter</option>
-                <option value="Instagram Stories">Instagram Stories</option>
-                <option value="Instagram Bio">Instagram Bio</option>
-                <option value="Display">Display</option>
-                <option value="Institutional">Institutional</option>
-                <option value="Email">Email</option>
-                <option value="PMB Facebook">PMB Facebook</option>
-                <option value="PMB Instagram">PMB Instagram</option>
-                <option value="PMB Twitter">PMB Twitter</option>
-                <option value="PMB">PMB FBIG</option>
-              </select>
-            </label>
-          </form>
-          <label>Alias (Optional):
-            <p>Alias will be appended to the link domain (nba.app.link). For example, if you entered "test_alias",
-              we would create the following link: "https://nba.app.link/test_alias".
-            <b>Note: link aliases may not be reused</b></p>
-            <input type="text" id="alias" class="form-control" value=""/>
-          </label>
-          <!-- </div> -->
-          <label>Campaign (Optional):
-            <p>The Social or marketing campaign name.</p>
-            <input type="text" id="campaign" class="form-control" value=""/>
-          </label>
-          <form action="" method="get" accept-charset="utf-8">
-            <label>Web Only?
-              <p>Should this link bring users to the .com page or into the app?<b> Note: this also makes the nested link web-only</b></p>
-              <select name="webonly" id="webonly">
-                <option value="" selected></option>
-                <option value="true">Yes - send users to the .com page</option>
-                <option value="">No - send users to the in-app page</option>
-              </select>
-            </label>
-          </form>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-              <a aria-expanded="false" aria-controls="other_fields">
-                Tags
-              </a>
-              </h3>
-            </div>
-            <div class="panel-body">
+                  <optgroup label="East"></optgroup>
+                  <option value="bucks">Bucks</option>
+                  <option value="bulls">Bulls</option>
+                  <option value="cavaliers">Cavaliers</option>
+                  <option value="celtics">Celtics</option>
+                  <option value="hawks">Hawks</option>
+                  <option value="heat">Heat</option>
+                  <option value="hornets">Hornets</option>
+                  <option value="knicks">Knicks</option>
+                  <option value="magic">Magic</option>
+                  <option value="nets">Nets</option>
+                  <option value="pacers">Pacers</option>
+                  <option value="pistons">Pistons</option>
+                  <option value="raptors">Raptors</option>
+                  <option value="sixers">Sixers</option>
+                  <option value="wizards">Wizards</option>
+                  <optgroup label="West"></optgroup>
+                  <option value="blazers">Blazers</option>
+                  <option value="clippers">Clippers</option>
+                  <option value="grizzlies">Grizzlies</option>
+                  <option value="jazz">Jazz</option>
+                  <option value="kings">Kings</option>
+                  <option value="lakers">Lakers</option>
+                  <option value="mavericks">Mavericks</option>
+                  <option value="nuggets">Nuggets</option>
+                  <option value="pelicans">Pelicans</option>
+                  <option value="rockets">Rockets</option>
+                  <option value="spurs">Spurs</option>
+                  <option value="suns">Suns</option>
+                  <option value="thunder">Thunder</option>
+                  <option value="timberwolves">Timberwolves</option>
+                  <option value="warriors">Warriors</option>
+                </select>
+              </label>
+              <label>Content (Required):
+                <p>What type of content is this link associated with?</p>
+                <select class="form-control custom-select" id="content_selector">
+                  <option value=""></option>
+                  <option value="player">Player</option>
+                  <option value="gameday">Gameday</option>
+                  <option value="league_pass">League Pass</option>
+                  <option value="interview">Interview</option>
+                  <option value="draft">Draft</option>
+                  <option value="other">[Other]</option>
+                </select>
+              </label>
+              <label>Media (Required):
+                <p>What media type is this link associated with?</p>
+                <select class="form-control custom-select" id="media_selector">
+                  <option value=""></option>
+                  <option value="image">Image</option>
+                  <option value="video">Video</option>
+                </select>
+              </label>
+              <label>Time (Required):
+                <p>What part of the seaason is this link associated with?</p>
+                <select class="form-control custom-select" id="time_selector">
+                  <option value=""></option>
+                  <option value="off_season">Off Season</option>
+                  <option value="preseason">Preseason</option>
+                  <option value="regular_season">Regular Season</option>
+                  <option value="playoffs">Playoffs</option>
+                  <option value="finals">Finals</option>
+                  <option value="season_restart">Season Restart</option>
+                </select>
+              </label>
               <form>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="@NBA">
-                  <span name='tags'>@NBA</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="regions">
-                  <span name='tags'>all star</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>all star draft</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="appdownload">
-                  <span name='tags'>appdownload</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="leaguepass">
-                  <span name='tags'>black friday</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="domestic">
-                  <span name='tags'>domestic</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="email">
-                  <span name='tags'>email</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="facebook">
-                  <span name='tags'>facebook</span>
+                <label for="channel">Channel (Recommended)
+                  <p>Where will you post this link? (utm_source) - Facebook, Instagram, Twitter, etc.</p>
+                  <select name="channel" id="channel">
+                    <option value="" selected></option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Facebook, Twitter, Instagram">Facebook, Twitter, Instagram</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram Stories">Instagram Stories</option>
+                    <option value="Instagram Bio">Instagram Bio</option>
+                    <option value="Display">Display</option>
+                    <option value="Institutional">Institutional</option>
+                    <option value="Email">Email</option>
+                    <option value="PMB Facebook">PMB Facebook</option>
+                    <option value="PMB Instagram">PMB Instagram</option>
+                    <option value="PMB Twitter">PMB Twitter</option>
+                    <option value="PMB">PMB FBIG</option>
+                  </select>
                 </label>
               </form>
-              <form>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="@NBA">
-                  <span name='tags'>finals</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="domestic">
-                  <span name='tags'>holiday free trial</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="influencersTag">
-                  <span name='tags'>influencers</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="domestic">
-                  <span name='tags'>inlanguagebroadcast</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="instagrambio">
-                  <span name='tags'>instagrambio</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="instagramstories">
-                  <span name='tags'>instagramstories</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="international">
-                  <span name='tags'>international</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="leaguepass">
-                  <span name='tags'>leaguepass</span>
+              <label>Alias (Optional):
+                <p>Alias will be appended to the link domain (nba.app.link). For example, if you entered "test_alias",
+                  we would create the following link: "https://nba.app.link/test_alias".
+                  <b>Note: link aliases may not be reused</b></p>
+                <input type="text" id="alias" class="form-control" value="" />
+              </label>
+              <!-- </div> -->
+              <label>Campaign (Optional):
+                <p>The Social or marketing campaign name.</p>
+                <input type="text" id="campaign" class="form-control" value="" />
+              </label>
+              <form action="" method="get" accept-charset="utf-8">
+                <label>Web Only?
+                  <p>Should this link bring users to the .com page or into the app?<b> Note: this also makes the nested
+                      link web-only</b></p>
+                  <select name="webonly" id="webonly">
+                    <option value="" selected></option>
+                    <option value="true">Yes - send users to the .com page</option>
+                    <option value="">No - send users to the in-app page</option>
+                  </select>
                 </label>
               </form>
-              <form>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="marketing">
-                  <span name='tags'>marketing</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="international">
-                  <span name='tags'>mid season free trial</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="leaguepass">
-                  <span name='tags'>nbadraft</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>onsale</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="organicsocial">
-                  <span name='tags'>organicsocial</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="paidsocial">
-                  <span name='tags'>paidsocial</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>playoffs</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>preseason</span>
-                </label>
-              </form>
-              <form>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="appdownload">
-                  <span name='tags'>race to the playoffs</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="regions">
-                  <span name='tags'>regions</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>restart</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="schedulerelease">
-                  <span name='tags'>schedulerelease</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="socialowned">
-                  <span name='tags'>socialowned</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="@NBA">
-                  <span name='tags'>sos</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="international">
-                  <span name='tags'>trivia</span>
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="box" value="twitter">
-                  <span name='tags'>twitter</span>
-                </label><br><br>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-                <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
-              </form>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">
+                    <a aria-expanded="false" aria-controls="other_fields">
+                      Tags
+                    </a>
+                  </h3>
+                </div>
+                <div class="panel-body">
+                  <form>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="@NBA">
+                      <span name='tags'>@NBA</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="regions">
+                      <span name='tags'>all star</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>all star draft</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="appdownload">
+                      <span name='tags'>appdownload</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="leaguepass">
+                      <span name='tags'>black friday</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="domestic">
+                      <span name='tags'>domestic</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="email">
+                      <span name='tags'>email</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="facebook">
+                      <span name='tags'>facebook</span>
+                    </label>
+                  </form>
+                  <form>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="@NBA">
+                      <span name='tags'>finals</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="domestic">
+                      <span name='tags'>holiday free trial</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="influencersTag">
+                      <span name='tags'>influencers</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="domestic">
+                      <span name='tags'>inlanguagebroadcast</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="instagrambio">
+                      <span name='tags'>instagrambio</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="instagramstories">
+                      <span name='tags'>instagramstories</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="international">
+                      <span name='tags'>international</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="leaguepass">
+                      <span name='tags'>leaguepass</span>
+                    </label>
+                  </form>
+                  <form>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="marketing">
+                      <span name='tags'>marketing</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="international">
+                      <span name='tags'>mid season free trial</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="leaguepass">
+                      <span name='tags'>nbadraft</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>onsale</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="organicsocial">
+                      <span name='tags'>organicsocial</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="paidsocial">
+                      <span name='tags'>paidsocial</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>playoffs</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>preseason</span>
+                    </label>
+                  </form>
+                  <form>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="appdownload">
+                      <span name='tags'>race to the playoffs</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="regions">
+                      <span name='tags'>regions</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>restart</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="schedulerelease">
+                      <span name='tags'>schedulerelease</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="socialowned">
+                      <span name='tags'>socialowned</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="@NBA">
+                      <span name='tags'>sos</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="international">
+                      <span name='tags'>trivia</span>
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="box" value="twitter">
+                      <span name='tags'>twitter</span>
+                    </label><br><br>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                    <input name='extraTags' type='text' class='form-inline' placeholder='Add a Tag'>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#fallback_fields" aria-expanded="false" aria-controls="other_fields">
-          International Redirect Behavior
-        </a>
-        </h3>
-      </div>
-      <div id="fallback_fields" class="collapse">
-        <div class="panel-body">
-          <label>International Fallback URL (Optional):
-            <p>After an International user clicks on the Domestic link, this is the fallback URL they'll go to - if you don't want users to be redirected to the App Store.<b> No need to set any of the below URLs if you set a value here.</b></p>
-            <input type="text" id="int_fallback" class="form-control" value=""/>
-          </label>
-          <label>International Desktop Web URL (Optional):
-            <p>If the link is clicked outside of the US on a Desktop device, where should that user go? If no value
-            is specified, user will be taken to https://nba.com on desktop.</p>
-            <input type="text" id="fallback_international_web" class="form-control" value=""/>
-          </label>
-          <label>International iOS URL (Optional):
-            <p>If the link is clicked outside of the US on mobile by a user without the app, where should that user go? If no value
-            is specified, user will be taken to the App Store.</p>
-            <input type="text" id="fallback_international_ios" class="form-control" value=""/>
-          </label>
-          <label>International Android URL (Optional):
-            <p>If the link is clicked outside of the US on mobile by a user without the app, where should that user go? If no value
-            is specified, user will be taken to the Play Store.</p>
-            <input type="text" id="fallback_international_android" class="form-control" value=""/>
-          </label>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#fallback_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                International Redirect Behavior
+              </a>
+            </h3>
+          </div>
+          <div id="fallback_fields" class="collapse">
+            <div class="panel-body">
+              <label>International Fallback URL (Optional):
+                <p>After an International user clicks on the Domestic link, this is the fallback URL they'll go to - if
+                  you don't want users to be redirected to the App Store.<b> No need to set any of the below URLs if you
+                    set a value here.</b></p>
+                <input type="text" id="int_fallback" class="form-control" value="" />
+              </label>
+              <label>International Desktop Web URL (Optional):
+                <p>If the link is clicked outside of the US on a Desktop device, where should that user go? If no value
+                  is specified, user will be taken to https://nba.com on desktop.</p>
+                <input type="text" id="fallback_international_web" class="form-control" value="" />
+              </label>
+              <label>International iOS URL (Optional):
+                <p>If the link is clicked outside of the US on mobile by a user without the app, where should that user
+                  go? If no value
+                  is specified, user will be taken to the App Store.</p>
+                <input type="text" id="fallback_international_ios" class="form-control" value="" />
+              </label>
+              <label>International Android URL (Optional):
+                <p>If the link is clicked outside of the US on mobile by a user without the app, where should that user
+                  go? If no value
+                  is specified, user will be taken to the Play Store.</p>
+                <input type="text" id="fallback_international_android" class="form-control" value="" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#domestic_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                Domestic Redirect Behavior
+              </a>
+            </h3>
+          </div>
+          <div id="domestic_fields" class="collapse">
+            <div class="panel-body">
+              <label>Domestic Fallback URL US (Optional):
+                <p>The Fallback URL for Domestic users - usually the packages pricing page. <b>No need to set any of the
+                    below URLs if you set a value here.</b></p>
+                <input type="text" id="dom_fallback_us" class="form-control" value="" />
+              </label>
+              <label>Domestic Desktop Web URL (Optional):
+                <p>If the link is clicked in the US on a Desktop device, where should that user go? If no value is
+                  specified, user will be taken to https://nba.com on desktop.</p>
+                <input type="text" id="desktop_domestic_web" class="form-control" value="" />
+              </label>
+              <label>Domestic iOS URL (Optional):
+                <p>If the link is clicked in the US on mobile by a user without the app, where should that user go? If
+                  no value
+                  is specified, user will be taken to the App Store.</p>
+                <input type="text" id="ios_domestic_web" class="form-control" value="" />
+              </label>
+              <label>Domestic Android URL (Optional):
+                <p>If the link is clicked in the US on mobile by a user without the app, where should that user go? If
+                  no value
+                  is specified, user will be taken to the Play Store.</p>
+                <input type="text" id="android_domestic_web" class="form-control" value="" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#dl_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                Deep Linking
+              </a>
+            </h3>
+          </div>
+          <div id="dl_fields" class="collapse">
+            <div class="panel-body">
+              <label>Deeplink Value (Optional):
+                <p>Used for deep linking into the NBA Domestic mobile apps.</p>
+                <input type="text" id="deeplink_value" class="form-control" value="" />
+              </label>
+              <label>Section ID (Optional):
+                <p>Used for deep linking into the NBA International mobile apps</p>
+                <input type="text" id="section_id" class="form-control" value="" />
+              </label>
+              <label>Content ID (Optional):
+                <p>Used for deep linking into the NBA International mobile apps</p>
+                <input type="text" id="content_id" class="form-control" value="" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#og_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                Social Media
+              </a>
+            </h3>
+          </div>
+          <div id="og_fields" class="collapse">
+            <div class="panel-body">
+              <label>OG Title (Optional):
+                <p>Specifies a title to show if the link is posted on social media.</p>
+                <input type="text" id="og_title" class="form-control" value="" />
+              </label>
+              <label>OG Description (Optional):
+                <p>Specifies a description to show if the link is posted on social media.</p>
+                <input type="text" id="og_description" class="form-control" value="" />
+              </label>
+              <label>OG Image URL (Optional):
+                <p>Specifies an image to show if the link is posted on social media.</p>
+                <input type="text" id="og_image" class="form-control" value="" />
+              </label>
+              <!-- Image Upload -->
+              <label>OG Video (Optional):
+                <p>Specifies a video to show if the link is posted on social media.</p>
+                <input type="text" id="og_video" class="form-control" value="" />
+              </label>
+              <label>OG URL (Optional):
+                <p>Specifies a url to serve as the canonical identifier of the og info.</p>
+                <input type="text" id="og_url" class="form-control" value="" />
+              </label>
+              <label>OG Type (Optional):
+                <p>Specifies a type of og content (ie article, book, etc.).</p>
+                <input type="text" id="og_type" class="form-control" value="" />
+              </label>
+              <label>Date (Optional):
+                <p>The date will be appended to the link to help distiguish between posts. Please format: <b>ddmmyy</b>.
+                  For example, April 10, 2018 would be <b>041018</b>.</p>
+                <input type="text" id="date" class="form-control" value="" />
+              </label>
+              <label>Player Name (Optional):
+                <p>The name of the player in the player post.</p>
+                <input type="text" id="playerName" class="form-control" value="" />
+              </label>
+              <label>Hashtags (Optional):
+                <p>Team hashtag(s) associated with the post.</p>
+                <input type="text" id="hashtags" class="form-control" value="" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#other_fields" aria-expanded="false"
+                aria-controls="other_fields">
+                Other Fields
+              </a>
+            </h3>
+          </div>
+          <div id="other_fields" class="collapse">
+            <div class="panel-body" id="extra_param_panel_body_domestic">
+              <button class="btn btn-info add-field-btn" onclick="addField(this)">Add Domestic Link Parameter</button>
+            </div>
+            <div class="panel-body" id="extra_param_panel_body_international">
+              <button class="btn btn-info add-field-btn" onclick="addField(this)">Add International Link
+                Parameter</button>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-info" onclick="createLink()">Create Link</button>
+        <div class="panel panel-default" style="border-style: none">
+          <h3 class="panel-title">Domestic Link:</h3>
+          <input type="text" id="final_url" class="form-control" value="Final Domestic Link Goes Here" readonly />
+          <h3 class="panel-title">International Link:</h3>
+          <input type="text" id="intl_url" class="form-control" value="Final International Link Goes Here" readonly />
         </div>
       </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#domestic_fields" aria-expanded="false" aria-controls="other_fields">
-          Domestic Redirect Behavior
-        </a>
-        </h3>
-      </div>
-      <div id="domestic_fields" class="collapse">
-        <div class="panel-body">
-          <label>Domestic Fallback URL US (Optional):
-            <p>The Fallback URL for Domestic users - usually the packages pricing page. <b>No need to set any of the below URLs if you set a value here.</b></p>
-            <input type="text" id="dom_fallback_us" class="form-control" value=""/>
-          </label>
-          <label>Domestic Desktop Web URL (Optional):
-            <p>If the link is clicked in the US on a Desktop device, where should that user go? If no value is specified, user will be taken to https://nba.com on desktop.</p>
-            <input type="text" id="desktop_domestic_web" class="form-control" value=""/>
-          </label>
-          <label>Domestic iOS URL (Optional):
-            <p>If the link is clicked in the US on mobile by a user without the app, where should that user go? If no value
-            is specified, user will be taken to the App Store.</p>
-            <input type="text" id="ios_domestic_web" class="form-control" value=""/>
-          </label>
-          <label>Domestic Android URL (Optional):
-            <p>If the link is clicked in the US on mobile by a user without the app, where should that user go? If no value
-            is specified, user will be taken to the Play Store.</p>
-            <input type="text" id="android_domestic_web" class="form-control" value=""/>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#dl_fields" aria-expanded="false" aria-controls="other_fields">
-          Deep Linking
-        </a>
-        </h3>
-      </div>
-      <div id="dl_fields" class="collapse">
-        <div class="panel-body">
-          <label>Deeplink Value (Optional):
-            <p>Used for deep linking into the NBA Domestic mobile apps.</p>
-            <input type="text" id="deeplink_value" class="form-control" value=""/>
-          </label>
-          <label>Section ID (Optional):
-            <p>Used for deep linking into the NBA International mobile apps</p>
-            <input type="text" id="section_id" class="form-control" value=""/>
-          </label>
-          <label>Content ID (Optional):
-            <p>Used for deep linking into the NBA International mobile apps</p>
-            <input type="text" id="content_id" class="form-control" value=""/>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#og_fields" aria-expanded="false" aria-controls="other_fields">
-          Social Media
-        </a>
-        </h3>
-      </div>
-      <div id="og_fields" class="collapse">
-        <div class="panel-body">
-          <label>OG Title (Optional):
-            <p>Specifies a title to show if the link is posted on social media.</p>
-            <input type="text" id="og_title" class="form-control" value=""/>
-          </label>
-          <label>OG Description (Optional):
-            <p>Specifies a description to show if the link is posted on social media.</p>
-            <input type="text" id="og_description" class="form-control" value=""/>
-          </label>
-          <label>OG Image URL (Optional):
-            <p>Specifies an image to show if the link is posted on social media.</p>
-            <input type="text" id="og_image" class="form-control" value=""/>
-          </label>
-          <!-- Image Upload -->
-          <label>OG Video (Optional):
-            <p>Specifies a video to show if the link is posted on social media.</p>
-            <input type="text" id="og_video" class="form-control" value=""/>
-          </label>
-          <label>OG URL (Optional):
-            <p>Specifies a url to serve as the canonical identifier of the og info.</p>
-            <input type="text" id="og_url" class="form-control" value=""/>
-          </label>
-          <label>OG Type (Optional):
-            <p>Specifies a type of og content (ie article, book, etc.).</p>
-            <input type="text" id="og_type" class="form-control" value=""/>
-          </label>
-          <label>Date (Optional):
-            <p>The date will be appended to the link to help distiguish between posts. Please format: <b>ddmmyy</b>. For example, April 10, 2018 would be <b>041018</b>.</p>
-            <input type="text" id="date" class="form-control" value=""/>
-          </label>
-          <label>Player Name (Optional):
-            <p>The name of the player in the player post.</p>
-            <input type="text" id="playerName" class="form-control" value=""/>
-          </label>
-          <label>Hashtags (Optional):
-            <p>Team hashtag(s) associated with the post.</p>
-            <input type="text" id="hashtags" class="form-control" value=""/>
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#other_fields" aria-expanded="false" aria-controls="other_fields">
-          Other Fields
-        </a>
-        </h3>
-      </div>
-      <div id="other_fields" class="collapse">
-        <div class="panel-body" id="extra_param_panel_body_domestic">
-          <button class="btn btn-info add-field-btn" onclick="addField(this)">Add Domestic Link Parameter</button>
-        </div>
-        <div class="panel-body" id="extra_param_panel_body_international">
-          <button class="btn btn-info add-field-btn" onclick="addField(this)">Add International Link Parameter</button>
-        </div>
-      </div>
-    </div>
-    <button class="btn btn-info" onclick="createLink()">Create Link</button>
-    <div class="panel panel-default" style="border-style: none">
-      <h3 class="panel-title">Domestic Link:</h3>
-      <input type="text" id="final_url" class="form-control" value="Final Domestic Link Goes Here" readonly />
-      <h3 class="panel-title">International Link:</h3>
-      <input type="text" id="intl_url" class="form-control" value="Final International Link Goes Here" readonly />
     </div>
   </div>
-</div>
-</div>
 </body>
+
 </html>

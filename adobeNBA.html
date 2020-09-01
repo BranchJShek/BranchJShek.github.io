@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Adobe Link Creator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="//branch.io/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//branch.io/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//branch.io/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//branch.io/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//branch.io/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//branch.io/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//branch.io/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//branch.io/img/favicon/apple-touch-icon-152x152.png">
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <style>
+        .page-header,
+        .panel-title,
+        label {
+            font-weight: lighter
+        }
+
+        .btn,
+        .page-header {
+            text-transform: uppercase
+        }
+
+        body {
+            font-family: "Open Sans", Helvetica, Arial;
+            background-color: #fafafa;
+            color: #444
+        }
+
+        label {
+            font-size: 110%
+        }
+
+        .panel-body {
+            display: grid
+        }
+
+        .panel-header {
+            margin-top: 70px
+        }
+
+        .page-header {
+            font-size: 300%;
+            margin-bottom: 30px
+        }
+
+        .panel-title {
+            font-size: 150%
+        }
+
+        .label {
+            display: inline-flex
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            height: inherit
+        }
+
+        .redactor_box,
+        input.form-control,
+        option,
+        select {
+            border-radius: 3px;
+            border-color: #eee;
+            font-size: 16px;
+            line-height: normal;
+            margin-right: 0;
+            padding: 15px 20px;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            width: 100%;
+            color: #444;
+            font-weight: 400;
+            background: #fff
+        }
+
+        .btn {
+            background-color: #1cadce;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            padding: 15px 15px;
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            color: #fff;
+            transition: background 250ms;
+            -webkit-transition: background 250ms;
+            margin: 30px auto 30px;
+            min-width: 170px
+        }
+
+        #final_url {
+            margin-top: 2%;
+            margin-bottom: 5%;
+            font-weight: lighter;
+            font-size: 110%
+        }
+
+        .navbar-brand img {
+            max-height: 40px
+        }
+
+        nav.navbar-main {
+            padding: 2px 0;
+            background-color: #2F2F2F;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+            border-radius: 0
+        }
+
+        .brand {
+            margin-top: -10px
+        }
+
+        .custom-select {
+            width: 145px;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 100;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 85%;
+        }
+
+        .extra-field {
+            display: inline-flex;
+        }
+
+        .extra-field-input {
+            margin: 10px 40px 10px 40px !important;
+        }
+
+        .add-field-btn {
+            font-size: 12px;
+        }
+    </style>
+
+    <script src="js/adobeNBA.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top navbar-main">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand brand">
+                    <a href="https://branchjshek.github.io" target="_blank" class="logo-container">
+                        <div class="branch-logo"><img src="https://branch.io/img/logo_white.png" alt="BranchMetrics"
+                                title="Branch Metrics"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel-header page-header">
+            NBA Adobe Link Creator
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-body">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#basic_fields"
+                                aria-expanded="false" aria-controls="other_fields">
+                                Adobe Link Creator
+                            </a>
+                        </h3>
+                    </div>
+                    <div id="basic_fields" class="form-row">
+                        <div class="panel-body">
+                            <p>Please select an option for all of the parameters below.</p>
+                            <label><b>Base Link</b>
+                                <p>The base link that you want to send users to - this link should point to an NBA website.</p>
+                                <input type="text" id="baselink" class="form-control" value="" />
+                            </label><br>
+                            <label><b>Adobe Parameter</b>
+                                <p>Which Adobe parameter should be appended?</p>
+                                <select class="form-control custom-select" id="adobe_param">
+                                    <option value="cid">cid</option>
+                                    <option value="iid">iid</option>
+                                    <option value="ls">ls</option>
+                                </select>
+                            </label><br>
+                            <label><b>League</b>
+                                <p>Which league is this link meant for?</p>
+                                <select class="form-control custom-select" id="league">
+                                    <option value="nba">nba</option>
+                                    <option value="2kl">2kl</option>
+                                    <option value="gl">gl</option>
+                                    <option value="gleague">gleague</option>
+                                    <option value="wnba">wnba</option>
+                                </select>
+                            </label><br>
+                            <label><b>Landing Page</b>
+                                <p>Landing page in the app?</p>
+                                <select class="form-control custom-select" id="landing_page">
+                                    <option value="allstar">allstar</option>
+                                    <option value="app">app</option>
+                                    <option value="applemusic">applemusic</option>
+                                    <option value="cares">cares</option>
+                                    <option value="cbs">cbs</option>
+                                    <option value="fit">fit</option>
+                                    <option value="hft">hft</option>
+                                    <option value="inplay">inplay</option>
+                                    <option value="jrnba">jrnba</option>
+                                    <option value="jrnbagc">jrnbagc</option>
+                                    <option value="nbatv">nbatv</option>
+                                    <option value="news">news</option>
+                                    <option value="pickem">pickem</option>
+                                    <option value="playoffs">playoffs</option>
+                                    <option value="qualifier">qualifier</option>
+                                    <option value="restart">restart</option>
+                                    <option value="schedule">schedule</option>
+                                    <option value="threeforall">threeforall</option>
+                                    <option value="tickets">tickets</option>
+                                </select>
+                            </label><br>
+                            <label><b>Initiative</b>
+                                <p>This is automatically set as this is the only option.</p>
+                                <select class="form-control custom-select" id="initiative" readonly>
+                                    <option value="inst">inst</option>
+                                </select>
+                            </label><br>
+                            <label for="channel"><b>Placement/Channel</b>
+                                <p>The Placement/Channel for the link.
+                                </p>
+                                <select name="channel" id="placement" class="form-control custom-select">
+                                    <option value="2kleaguecom">2kleaguecom</option>
+                                    <option value="cbsi">cbsi</option>
+                                    <option value="cbsportsnewsletter">cbsportsnewsletter</option>
+                                    <option value="daily">daily</option>
+                                    <option value="eanbalivemobile">eanbalivemobile</option>
+                                    <option value="gleaguecom">gleaguecom</option>
+                                    <option value="glnewsletter">glnewsletter</option>
+                                    <option value="lp">lp</option>
+                                    <option value="mgmnewsletter">mgmnewsletter</option>
+                                    <option value="nbacom">nbacom</option>
+                                    <option value="nbaticketscom">nbaticketscom</option>
+                                    <option value="pandora">pandora</option>
+                                    <option value="radiocom">radiocom</option>
+                                    <option value="top5">top5</option>
+                                    <option value="tuneinradio">tuneinradio</option>
+                                    <option value="twitch">twitch</option>
+                                    <option value="usabcom">usabcom</option>
+                                    <option value="wnbacom">wnbacom</option>
+                                    <option value="wnbanewsletter">wnbanewsletter</option>
+                                    <option value="yahoosports">yahoosports</option>
+                                </select>
+                            </label><br>
+                            <label for="campaign"><b>Campaign</b>
+                                <p>The campaign for this link.
+                                </p>
+                                <select name="campaign" id="campaign" class="form-control custom-select">
+                                    <option value="app">app</option>
+                                    <option value="athome">athome</option>
+                                    <option value="awareness">awareness</option>
+                                    <option value="baseline">baseline</option>
+                                    <option value="christmas">christmas</option>
+                                    <option value="finals">finals</option>
+                                    <option value="fitweek">fitweek</option>
+                                    <option value="gametime">gametime</option>
+                                    <option value="healthyhabits">healthyhabits</option>
+                                    <option value="hft">hft</option>
+                                    <option value="holiday">holiday</option>
+                                    <option value="inplay">inplay</option>
+                                    <option value="mentalhealth">mentalhealth</option>
+                                    <option value="mlk">mlk</option>
+                                    <option value="nbatogether">nbatogether</option>
+                                    <option value="nbatv">nbatv</option>
+                                    <option value="pickem">pickem</option>
+                                    <option value="playoffs">playoffs</option>
+                                    <option value="qualifier">qualifier</option>
+                                    <option value="satprime">satprime</option>
+                                    <option value="seasonbegins">seasonbegins</option>
+                                    <option value="seasoncontinues">seasoncontinues</option>
+                                    <option value="showcase">showcase</option>
+                                    <option value="starwars">starwars</option>
+                                    <option value="theticket">theticket</option>
+                                    <option value="theturn">theturn</option>
+                                    <option value="tickets">tickets</option>
+                                    <option value="tipoff">tipoff</option>
+                                    <option value="tm">tm</option>
+                                    <option value="tune-in">tune-in</option>
+                                    <option value="tunein">tunein</option>
+                                    <option value="virtual">virtual</option>
+                                    <option value="wearamask">wearamask</option>
+                                </select>
+                            </label><br>
+                            <label for="optional"><b>Optional Tags</b>
+                                <p>Optional tags to append to the link.
+                                </p>
+                                <select name="optional" id="optionals" class="form-control custom-select">
+                                    <option value="display">display</option>
+                                    <option value="htpo">hpto</option>
+                                    <option value="olv">olv</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-info" onclick="createAdobeLink()">Create Link</button>
+                <div class="panel panel-default" style="border-style: none">
+                    <h3 class="panel-title">Adobe Link:</h3>
+                    <input type="text" id="final_url" class="form-control" value="Finished link will appear here"
+                        readonly />
+                    <h3 class="panel-title">Previous Adobe Param used:</h3>
+                    <input type="text" id="previousParam" class="form-control" value="Previously used Adobe Param will appear here"
+                        readonly />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
