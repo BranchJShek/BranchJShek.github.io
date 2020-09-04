@@ -191,8 +191,8 @@
                         </h3>
                     </div>
                 </div>
+                <h4>Please select an option for all of the parameters below.</h4>
                 <div class="panel-body">
-                    <p>Please select an option for all of the parameters below.</p>
                     <label><b>Base Link</b>
                         <p>The base link that you want to send users to - this link should point to an NBA website.</p>
                         <input type="text" id="baselink" class="form-control" value="" />
@@ -213,7 +213,8 @@
                                 <label><b>League</b>
                                     <p>Which league is this link meant for?</p>
                                     <select class="form-control custom-select" id="league">
-                                        <option value="nba">nba</option>
+                                        <option value=""></option>
+                                        <option value="nba" selected>nba</option>
                                         <option value="2kl">2kl</option>
                                         <option value="gl">gl</option>
                                         <option value="gleague">gleague</option>
@@ -225,6 +226,7 @@
                                 <label><b>Landing Page</b>
                                     <p>Landing page in the app?</p>
                                     <select class="form-control custom-select" id="landing_page">
+                                        <option value=""></option>
                                         <option value="allstar">allstar</option>
                                         <option value="app">app</option>
                                         <option value="applemusic">applemusic</option>
@@ -249,9 +251,10 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label><b>Initiative</b>
-                                    <p>This is automatically set as this is the only option.</p>
-                                    <select class="form-control custom-select" id="initiative" readonly>
-                                        <option value="inst">inst</option>
+                                    <p>The initiative.</p>
+                                    <select class="form-control custom-select" id="initiative">
+                                        <option value=""></option>
+                                        <option value="inst" selected>inst</option>
                                     </select>
                                 </label><br>
                             </div>
@@ -260,6 +263,7 @@
                                     <p>The Placement/Channel for the link.
                                     </p>
                                     <select name="channel" id="placement" class="form-control custom-select">
+                                        <option value=""></option>
                                         <option value="2kleaguecom">2kleaguecom</option>
                                         <option value="cbsi">cbsi</option>
                                         <option value="cbsportsnewsletter">cbsportsnewsletter</option>
@@ -288,6 +292,7 @@
                                     <p>The campaign for this link.
                                     </p>
                                     <select name="campaign" id="campaign" class="form-control custom-select">
+                                        <option value=""></option>
                                         <option value="app">app</option>
                                         <option value="athome">athome</option>
                                         <option value="awareness">awareness</option>
