@@ -116,3 +116,30 @@ function downloadObjectAsJson(adobeJSON) {
   downloadAnchorNode.click();
   downloadAnchorNode.remove();
 }
+
+function downloadObjectAsCSV(adobeJSON) {
+	var adobeJSON = JSON.parse(localStorage.getItem("adobeParams"))
+
+	const rows = [
+		adobeJSON.adobeParams.cid,
+		adobeJSON.adobeParams.iid,
+		adobeJSON.adobeParams.ls
+	];
+
+	let csvContent = "data:text/csv;charset=utf-8,";
+
+	rows.forEach(function(rowArray) {
+		let row = rowArray.join(",");
+		csvContent += row + "\r\n";
+	});
+
+	var encodedUri = encodeURI(csvContent);
+	var link = document.createElement("a");
+	link.setAttribute("href", encodedUri);
+	link.setAttribute("download", "adobeParams.csv");
+	document.body.appendChild(link); 
+
+	link.click(); 
+}
+
+

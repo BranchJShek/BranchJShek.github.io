@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>NBA Adobe Link Creator</title>
     <meta charset="utf-8">
@@ -105,7 +106,7 @@
             color: #fff;
             transition: background 250ms;
             -webkit-transition: background 250ms;
-            margin: 30px auto 30px;
+            margin: 10px auto 10px;
             min-width: 170px
         }
 
@@ -134,7 +135,7 @@
         }
 
         .custom-select {
-            width: 205px;
+            width: 400px;
             padding: 15px;
             font-size: 16px;
             font-weight: 100;
@@ -178,7 +179,7 @@
         <div class="panel-header page-header">
             NBA Adobe Link Creator
         </div>
-        <div class="panel panel-danger">
+        <div class="panel">
             <div class="panel-body">
                 <div class="panel panel-danger">
                     <div class="panel-heading">
@@ -189,149 +190,183 @@
                             </a>
                         </h3>
                     </div>
-                    <div id="basic_fields" class="form-row">
-                        <div class="panel-body">
-                            <p>Please select an option for all of the parameters below.</p>
-                            <label><b>Base Link</b>
-                                <p>The base link that you want to send users to - this link should point to an NBA website.</p>
-                                <input type="text" id="baselink" class="form-control" value="" />
-                            </label><br>
-                            <label><b>Adobe Parameter</b>
-                                <p>Which Adobe parameter should be appended?</p>
-                                <select class="form-control custom-select" id="adobe_param">
-                                    <option value="cid">cid</option>
-                                    <option value="iid">iid</option>
-                                    <option value="ls">ls</option>
-                                </select>
-                            </label><br>
-                            <label><b>League</b>
-                                <p>Which league is this link meant for?</p>
-                                <select class="form-control custom-select" id="league">
-                                    <option value="nba">nba</option>
-                                    <option value="2kl">2kl</option>
-                                    <option value="gl">gl</option>
-                                    <option value="gleague">gleague</option>
-                                    <option value="wnba">wnba</option>
-                                </select>
-                            </label><br>
-                            <label><b>Landing Page</b>
-                                <p>Landing page in the app?</p>
-                                <select class="form-control custom-select" id="landing_page">
-                                    <option value="allstar">allstar</option>
-                                    <option value="app">app</option>
-                                    <option value="applemusic">applemusic</option>
-                                    <option value="cares">cares</option>
-                                    <option value="cbs">cbs</option>
-                                    <option value="fit">fit</option>
-                                    <option value="hft">hft</option>
-                                    <option value="inplay">inplay</option>
-                                    <option value="jrnba">jrnba</option>
-                                    <option value="jrnbagc">jrnbagc</option>
-                                    <option value="nbatv">nbatv</option>
-                                    <option value="news">news</option>
-                                    <option value="pickem">pickem</option>
-                                    <option value="playoffs">playoffs</option>
-                                    <option value="qualifier">qualifier</option>
-                                    <option value="restart">restart</option>
-                                    <option value="schedule">schedule</option>
-                                    <option value="threeforall">threeforall</option>
-                                    <option value="tickets">tickets</option>
-                                </select>
-                            </label><br>
-                            <label><b>Initiative</b>
-                                <p>This is automatically set as this is the only option.</p>
-                                <select class="form-control custom-select" id="initiative" readonly>
-                                    <option value="inst">inst</option>
-                                </select>
-                            </label><br>
-                            <label for="channel"><b>Placement/Channel</b>
-                                <p>The Placement/Channel for the link.
-                                </p>
-                                <select name="channel" id="placement" class="form-control custom-select">
-                                    <option value="2kleaguecom">2kleaguecom</option>
-                                    <option value="cbsi">cbsi</option>
-                                    <option value="cbsportsnewsletter">cbsportsnewsletter</option>
-                                    <option value="daily">daily</option>
-                                    <option value="eanbalivemobile">eanbalivemobile</option>
-                                    <option value="gleaguecom">gleaguecom</option>
-                                    <option value="glnewsletter">glnewsletter</option>
-                                    <option value="lp">lp</option>
-                                    <option value="mgmnewsletter">mgmnewsletter</option>
-                                    <option value="nbacom">nbacom</option>
-                                    <option value="nbaticketscom">nbaticketscom</option>
-                                    <option value="pandora">pandora</option>
-                                    <option value="radiocom">radiocom</option>
-                                    <option value="top5">top5</option>
-                                    <option value="tuneinradio">tuneinradio</option>
-                                    <option value="twitch">twitch</option>
-                                    <option value="usabcom">usabcom</option>
-                                    <option value="wnbacom">wnbacom</option>
-                                    <option value="wnbanewsletter">wnbanewsletter</option>
-                                    <option value="yahoosports">yahoosports</option>
-                                </select>
-                            </label><br>
-                            <label for="campaign"><b>Campaign</b>
-                                <p>The campaign for this link.
-                                </p>
-                                <select name="campaign" id="campaign" class="form-control custom-select">
-                                    <option value="app">app</option>
-                                    <option value="athome">athome</option>
-                                    <option value="awareness">awareness</option>
-                                    <option value="baseline">baseline</option>
-                                    <option value="christmas">christmas</option>
-                                    <option value="finals">finals</option>
-                                    <option value="fitweek">fitweek</option>
-                                    <option value="gametime">gametime</option>
-                                    <option value="healthyhabits">healthyhabits</option>
-                                    <option value="hft">hft</option>
-                                    <option value="holiday">holiday</option>
-                                    <option value="inplay">inplay</option>
-                                    <option value="mentalhealth">mentalhealth</option>
-                                    <option value="mlk">mlk</option>
-                                    <option value="nbatogether">nbatogether</option>
-                                    <option value="nbatv">nbatv</option>
-                                    <option value="pickem">pickem</option>
-                                    <option value="playoffs">playoffs</option>
-                                    <option value="qualifier">qualifier</option>
-                                    <option value="satprime">satprime</option>
-                                    <option value="seasonbegins">seasonbegins</option>
-                                    <option value="seasoncontinues">seasoncontinues</option>
-                                    <option value="showcase">showcase</option>
-                                    <option value="starwars">starwars</option>
-                                    <option value="theticket">theticket</option>
-                                    <option value="theturn">theturn</option>
-                                    <option value="tickets">tickets</option>
-                                    <option value="tipoff">tipoff</option>
-                                    <option value="tm">tm</option>
-                                    <option value="tune-in">tune-in</option>
-                                    <option value="tunein">tunein</option>
-                                    <option value="virtual">virtual</option>
-                                    <option value="wearamask">wearamask</option>
-                                </select>
-                            </label><br>
-                            <label for="optional"><b>Optional Tags</b>
-                                <p>Optional tags to append to the link.
-                                </p>
-                                <select name="optional" id="optionals" class="form-control custom-select">
-                                    <option value="" selected></option>
-                                    <option value="display">display</option>
-                                    <option value="htpo">hpto</option>
-                                    <option value="olv">olv</option>
-                                </select>
-                            </label>
+                </div>
+                <h4>Please select an option for all of the parameters below.</h4>
+                <div class="panel-body">
+                    <label><b>Base Link</b>
+                        <p>The base link that you want to send users to - this link should point to an NBA website.</p>
+                        <input type="text" id="baselink" class="form-control" value="" />
+                    </label><br>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><b>Adobe Parameter</b>
+                                    <p>Which Adobe parameter should be appended?</p>
+                                    <select class="form-control custom-select" id="adobe_param">
+                                        <option value="cid">cid</option>
+                                        <option value="iid">iid</option>
+                                        <option value="ls">ls</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><b>League</b>
+                                    <p>Which league is this link meant for?</p>
+                                    <select class="form-control custom-select" id="league">
+                                        <option value=""></option>
+                                        <option value="nba" selected>nba</option>
+                                        <option value="2kl">2kl</option>
+                                        <option value="gl">gl</option>
+                                        <option value="gleague">gleague</option>
+                                        <option value="wnba">wnba</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><b>Landing Page</b>
+                                    <p>Landing page in the app?</p>
+                                    <select class="form-control custom-select" id="landing_page">
+                                        <option value=""></option>
+                                        <option value="allstar">allstar</option>
+                                        <option value="app">app</option>
+                                        <option value="applemusic">applemusic</option>
+                                        <option value="cares">cares</option>
+                                        <option value="cbs">cbs</option>
+                                        <option value="fit">fit</option>
+                                        <option value="hft">hft</option>
+                                        <option value="inplay">inplay</option>
+                                        <option value="jrnba">jrnba</option>
+                                        <option value="jrnbagc">jrnbagc</option>
+                                        <option value="nbatv">nbatv</option>
+                                        <option value="news">news</option>
+                                        <option value="pickem">pickem</option>
+                                        <option value="playoffs">playoffs</option>
+                                        <option value="qualifier">qualifier</option>
+                                        <option value="restart">restart</option>
+                                        <option value="schedule">schedule</option>
+                                        <option value="threeforall">threeforall</option>
+                                        <option value="tickets">tickets</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><b>Initiative</b>
+                                    <p>The initiative.</p>
+                                    <select class="form-control custom-select" id="initiative">
+                                        <option value=""></option>
+                                        <option value="inst" selected>inst</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="channel"><b>Placement/Channel</b>
+                                    <p>The Placement/Channel for the link.
+                                    </p>
+                                    <select name="channel" id="placement" class="form-control custom-select">
+                                        <option value=""></option>
+                                        <option value="2kleaguecom">2kleaguecom</option>
+                                        <option value="cbsi">cbsi</option>
+                                        <option value="cbsportsnewsletter">cbsportsnewsletter</option>
+                                        <option value="daily">daily</option>
+                                        <option value="eanbalivemobile">eanbalivemobile</option>
+                                        <option value="gleaguecom">gleaguecom</option>
+                                        <option value="glnewsletter">glnewsletter</option>
+                                        <option value="lp">lp</option>
+                                        <option value="mgmnewsletter">mgmnewsletter</option>
+                                        <option value="nbacom">nbacom</option>
+                                        <option value="nbaticketscom">nbaticketscom</option>
+                                        <option value="pandora">pandora</option>
+                                        <option value="radiocom">radiocom</option>
+                                        <option value="top5">top5</option>
+                                        <option value="tuneinradio">tuneinradio</option>
+                                        <option value="twitch">twitch</option>
+                                        <option value="usabcom">usabcom</option>
+                                        <option value="wnbacom">wnbacom</option>
+                                        <option value="wnbanewsletter">wnbanewsletter</option>
+                                        <option value="yahoosports">yahoosports</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="campaign"><b>Campaign</b>
+                                    <p>The campaign for this link.
+                                    </p>
+                                    <select name="campaign" id="campaign" class="form-control custom-select">
+                                        <option value=""></option>
+                                        <option value="app">app</option>
+                                        <option value="athome">athome</option>
+                                        <option value="awareness">awareness</option>
+                                        <option value="baseline">baseline</option>
+                                        <option value="christmas">christmas</option>
+                                        <option value="finals">finals</option>
+                                        <option value="fitweek">fitweek</option>
+                                        <option value="gametime">gametime</option>
+                                        <option value="healthyhabits">healthyhabits</option>
+                                        <option value="hft">hft</option>
+                                        <option value="holiday">holiday</option>
+                                        <option value="inplay">inplay</option>
+                                        <option value="mentalhealth">mentalhealth</option>
+                                        <option value="mlk">mlk</option>
+                                        <option value="nbatogether">nbatogether</option>
+                                        <option value="nbatv">nbatv</option>
+                                        <option value="pickem">pickem</option>
+                                        <option value="playoffs">playoffs</option>
+                                        <option value="qualifier">qualifier</option>
+                                        <option value="satprime">satprime</option>
+                                        <option value="seasonbegins">seasonbegins</option>
+                                        <option value="seasoncontinues">seasoncontinues</option>
+                                        <option value="showcase">showcase</option>
+                                        <option value="starwars">starwars</option>
+                                        <option value="theticket">theticket</option>
+                                        <option value="theturn">theturn</option>
+                                        <option value="tickets">tickets</option>
+                                        <option value="tipoff">tipoff</option>
+                                        <option value="tm">tm</option>
+                                        <option value="tune-in">tune-in</option>
+                                        <option value="tunein">tunein</option>
+                                        <option value="virtual">virtual</option>
+                                        <option value="wearamask">wearamask</option>
+                                    </select>
+                                </label><br>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="optional"><b>Optional Tags</b>
+                                    <p>Optional tags to append to the link.
+                                    </p>
+                                    <select name="optional" id="optionals" class="form-control custom-select">
+                                        <option value="" selected></option>
+                                        <option value="display">display</option>
+                                        <option value="htpo">hpto</option>
+                                        <option value="olv">olv</option>
+                                    </select>
+                                </label>
+                            </div>
                         </div>
-                        <h3>Previously used Adobe Params</h3>
+                    </form>
+                    <button class="btn btn-info" onclick="createAdobeLink(), storeParams()">Create Link</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-body">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a style="justify-content: center;">
+                                Link and Parameters
+                            </a>
+                        </h3>
                     </div>
                 </div>
-                <button class="btn btn-info" onclick="createAdobeLink(), storeParams()">Create Link</button>
-                <button class='btn btn-info' onclick='downloadObjectAsJson()'>Download Adobe Params</button>
+                <button class='btn btn-info' onclick='downloadObjectAsJson()'>Download Adobe Params as JSON</button>
+                <button class='btn btn-info' onclick='downloadObjectAsCSV()'>Download Adobe Params as CSV</button>
                 <div class="panel panel-default" style="border-style: none">
                     <h3 class="panel-title">Adobe Link:</h3>
-                    <input type="text" id="final_url" class="display form-control" value="Finished link will appear here"
-                        readonly />
+                    <input type="text" id="final_url" class="display form-control"
+                        value="Finished link will appear here" readonly />
                     <h3 class="panel-title">Previously used Adobe Param:</h3>
-                    <input type="text" id="previousParam" class="display form-control" value="Previously used Adobe Param will appear here"
-                        readonly />
+                    <input type="text" id="previousParam" class="display form-control"
+                        value="Previously used Adobe Param will appear here" readonly />
                 </div>
             </div>
         </div>
