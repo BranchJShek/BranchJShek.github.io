@@ -73,7 +73,7 @@ function createAdobeLink() {
   }
 }
 
-import {API_KEY, client_id } from 'js/gsheets.js';
+import {API_KEY, client_id } from './gsheets.js';
 
 // Google Sheets API - Append
 function authenticate() {
