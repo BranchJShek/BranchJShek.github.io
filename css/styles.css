@@ -57,3 +57,9 @@ li {
 a {
   color: #911818;
 }
+
+.jumbotron{ 
+	background-image: url('https://fetchacure.org/wp-content/uploads/2014/05/petco-logo.png'); 
+	background-size: center; 
+	background-repeat: no-repeat; 
+}  

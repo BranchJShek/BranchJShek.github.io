@@ -26,19 +26,12 @@ function createAdobeLink() {
   var optionals = document.getElementById("optionals").value;
   var display = document.getElementById("final_url");
 
-  // concatenate all params
-  var adobeValue =
-    league +
-    ":" +
-    landingPage +
-    ":" +
-    initiative +
-    ":" +
-    placement +
-    ":" +
-    campaign +
-    ":" +
-    optionals;
+	// concatenate all params
+	if (optionals) {
+		var adobeValue = league + ":" + landingPage + ":" + initiative + ":" + placement + ":" + campaign + ":" + optionals
+	}  else {
+		var adobeValue = league + ":" + landingPage + ":" + initiative + ":" + placement + ":" + campaign
+	} 
 
   if (
     adobeParam &&
@@ -141,5 +134,4 @@ function downloadObjectAsCSV(adobeJSON) {
 
 	link.click(); 
 }
-
 
