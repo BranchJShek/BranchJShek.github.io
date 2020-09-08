@@ -94,8 +94,11 @@
             background: #fff
         }
 
-        button.btn-info {
+        .btn-info {
             background-color: #1cadce;
+        }
+
+        .btn {
             font-weight: 700;
             font-size: 16px;
             display: inline-block;
@@ -103,11 +106,11 @@
             border-radius: 2px;
             -moz-border-radius: 2px;
             -webkit-border-radius: 2px;
-            color: #fff;
             transition: background 250ms;
             -webkit-transition: background 250ms;
             margin: 10px auto 10px;
-            min-width: 170px
+            min-width: 170px;
+            color: #fff;
         }
 
         .display {
@@ -162,6 +165,17 @@
     <script src="js/adobeNBA.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script>
+        // Client ID and API key from the Developer Console
+        var CLIENT_ID = "801967132341-rancdubi2knfel6sn33q693iph1eekl3.apps.googleusercontent.com";
+        var API_KEY = "AIzaSyA9e-gZT30aBa2Ahpp5nQa94YWDlmFK3VY";
+
+        // Array of API discovery doc URLs for APIs used by the quickstart
+         var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+        // Authorization scopes required by the API; multiple scopes can be
+        // included, separated by spaces.
+        var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+
         // Google Sheets API - Append
         function authenticate() {
             return gapi.auth2.getAuthInstance()
@@ -170,7 +184,7 @@
                     function (err) { console.error("Error signing in", err); });
         }
         function loadClient() {
-            gapi.client.setApiKey("AIzaSyA9e-gZT30aBa2Ahpp5nQa94YWDlmFK3VY");
+            gapi.client.setApiKey(API_KEY);
             return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/sheets/v4/rest")
                 .then(function () { console.log("GAPI client loaded for API"); },
                     function (err) { console.error("Error loading GAPI client for API", err); });
@@ -201,7 +215,7 @@
                     function (err) { console.error("Execute error", err); });
         }
         gapi.load("client:auth2", function () {
-            gapi.auth2.init({ client_id: "801967132341-rancdubi2knfel6sn33q693iph1eekl3.apps.googleusercontent.com" });
+            gapi.auth2.init({ client_id: client_id });
         });
 
         function storeParams() {
@@ -431,9 +445,9 @@
                 </div>
                 <button class='btn btn-info' onclick='downloadObjectAsJson()'>Download Adobe Params as JSON</button>
                 <button class='btn btn-info' onclick='downloadObjectAsCSV()'>Download Adobe Params as CSV</button>
-                <a
-                    href="https://docs.google.com/spreadsheets/d/18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms/edit#gid=0"><button
-                        class='btn btn-success'>View Google Sheets</button></a>
+                <button class='btn btn-success'><a
+                    href="https://docs.google.com/spreadsheets/d/18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms/edit#gid=0">
+                        </a>Google Sheets</button>
                 <div class="panel panel-default" style="border-style: none">
                     <h3 class="panel-title">Adobe Link:</h3>
                     <input type="text" id="final_url" class="display form-control"
