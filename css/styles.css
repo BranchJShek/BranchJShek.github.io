@@ -6,7 +6,8 @@ body, html {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("https://images.unsplash.com/photo-1587749158407-58ef2b89ccf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2769&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1587749158407-58ef2b89ccf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2769&q=80"); */
+  background-color: #aab2b6;
 
   /* Set a specific height */
   height: 100%;
@@ -54,12 +55,12 @@ li {
   color: white;
 }
 
-a {
-  color: #911818;
-}
-
 .jumbotron{ 
 	background-image: url('https://fetchacure.org/wp-content/uploads/2014/05/petco-logo.png'); 
 	background-size: center; 
 	background-repeat: no-repeat; 
 }  
+
+.navbar-brand {
+  color: white;
+}
