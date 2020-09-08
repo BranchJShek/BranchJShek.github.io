@@ -159,7 +159,8 @@
         }
     </style>
 
-    <script src="js/adobeNBA.js"></script>
+    <script type="module" src="js/adobeNBA.js"></script>
+    <script src="https://apis.google.com/js/api.js" async defer></script>
 </head>
 
 <body>
@@ -343,7 +344,7 @@
                             </div>
                         </div>
                     </form>
-                    <button class="btn btn-info" onclick="createAdobeLink(), storeParams()">Create Link</button>
+                    <button class="btn btn-info" onclick="createAdobeLink(), authenticate(), loadClient(), storeParams()">Create Link</button>
                 </div>
             </div>
         </div>
@@ -360,6 +361,7 @@
                 </div>
                 <button class='btn btn-info' onclick='downloadObjectAsJson()'>Download Adobe Params as JSON</button>
                 <button class='btn btn-info' onclick='downloadObjectAsCSV()'>Download Adobe Params as CSV</button>
+                <a href="https://docs.google.com/spreadsheets/d/18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms/edit#gid=0"></a><button class='btn btn-success'>View Google Sheets</button>
                 <div class="panel panel-default" style="border-style: none">
                     <h3 class="panel-title">Adobe Link:</h3>
                     <input type="text" id="final_url" class="display form-control"
