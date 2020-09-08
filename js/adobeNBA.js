@@ -1,4 +1,32 @@
+// Google Sheets API - Append
+// Client ID and API key from the Developer Console
+var CLIENT_ID = "801967132341-rancdubi2knfel6sn33q693iph1eekl3.apps.googleusercontent.com";
+var API_KEY = "AIzaSyA9e-gZT30aBa2Ahpp5nQa94YWDlmFK3VY";
+
+// Array of API discovery doc URLs for APIs used by the quickstart
+var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+// Authorization scopes required by the API; multiple scopes can be
+// included, separated by spaces.
+var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+
+function authenticate() {
+  return gapi.auth2.getAuthInstance()
+      .signIn({ scope: "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets" })
+      .then(function () { console.log("Sign-in successful"); },
+          function (err) { console.error("Error signing in", err); });
+}
+function loadClient() {
+  gapi.client.setApiKey(API_KEY);
+  return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/sheets/v4/rest")
+      .then(function () { console.log("GAPI client loaded for API"); },
+          function (err) { console.error("Error loading GAPI client for API", err); });
+}
+
 $(document).ready(function () {
+  authenticate()
+  loadClient()
+
   var previous = document.getElementById("previousParam");
 
   // if there was a previous Adobe param, display it
@@ -73,14 +101,35 @@ function createAdobeLink() {
   }
 }
 
-function makeApiCall() {
-  var params = {
-    spreadsheetId: "18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms",
-    range: 'A2',
-    valueInputOption: "RAW",
-    insertDataOption: "INSERT_ROWS"
-  }
+
+// Make sure the client is loaded and sign-in is complete before calling this method.
+function execute(param) {
+  return gapi.client.sheets.spreadsheets.values.append({
+      "spreadsheetId": "18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms",
+      "range": "A2",
+      "includeValuesInResponse": true,
+      "insertDataOption": "INSERT_ROWS",
+      "responseDateTimeRenderOption": "FORMATTED_STRING",
+      "responseValueRenderOption": "FORMATTED_VALUE",
+      "valueInputOption": "RAW",
+      "resource": {
+          "range": "A2",
+          "values": [
+              [
+                  param
+              ]
+          ]
+      }
+  })
+      .then(function (response) {
+          // Handle the results here (response.result has the parsed body).
+          console.log("Response", response);
+      },
+          function (err) { console.error("Execute error", err); });
 }
+gapi.load("client:auth2", function () {
+  gapi.auth2.init({ client_id: CLIENT_ID });
+});
 
 function storeParams() {
   // var adobeParams = {"adobeParams": { "cid":[], "iid":[], "ls":[] }}
