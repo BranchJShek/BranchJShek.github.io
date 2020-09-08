@@ -73,6 +73,15 @@ function createAdobeLink() {
   }
 }
 
+function makeApiCall() {
+  var params = {
+    spreadsheetId: "18th2014poLYwTbfJjjHlR2LgW9GkNJza6yQzNxWrPms",
+    range: 'A2',
+    valueInputOption: "RAW",
+    insertDataOption: "INSERT_ROWS"
+  }
+}
+
 function storeParams() {
   // var adobeParams = {"adobeParams": { "cid":[], "iid":[], "ls":[] }}
   var adobeJSON = JSON.parse(localStorage.getItem("adobeParams"));
