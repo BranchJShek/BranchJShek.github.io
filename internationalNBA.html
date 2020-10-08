@@ -1,0 +1,574 @@
+<html>
+  <head>
+    <title>NBA International Link Creator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="https://assets.materialup.com/uploads/347c48be-3ed3-4e80-87a0-3353405f0239/0x0ss-85.jpg">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <style>
+    .page-header,
+    .panel-title,
+    label {
+        font-weight: lighter
+    }
+
+    .btn,
+    .page-header {
+        text-transform: uppercase
+    }
+
+    body {
+        font-family: "Open Sans", Helvetica, Arial;
+        background-color: #fafafa;
+        color: #444
+    }
+
+    label {
+        font-size: 110%
+    }
+
+    .panel-body {
+        display: grid
+    }
+
+    .panel-header {
+        margin-top: 70px
+    }
+
+    .page-header {
+        font-size: 300%;
+        margin-bottom: 30px
+    }
+
+    .panel-title {
+        font-size: 150%
+    }
+
+    .label {
+        display: inline-flex
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+        height: inherit
+    }
+
+    .redactor_box,
+    input.form-control,
+    option,
+    select {
+        border-radius: 3px;
+        border-color: #eee;
+        font-size: 16px;
+        line-height: normal;
+        margin-right: 0;
+        padding: 15px 20px;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        color: #444;
+        font-weight: 400;
+        background: #fff
+    }
+
+    .btn {
+        background-color: #1cadce;
+        font-weight: 700;
+        font-size: 16px;
+        display: inline-block;
+        padding: 15px 15px;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        color: #fff;
+        transition: background 250ms;
+        -webkit-transition: background 250ms;
+        margin: 30px auto 30px;
+        min-width: 170px
+    }
+
+    #final_url {
+        margin-top: 2%;
+        margin-bottom: 5%;
+        font-weight: lighter;
+        font-size: 110%
+    }
+
+    .navbar-brand img {
+        max-height: 40px
+    }
+
+    nav.navbar-main {
+        padding: 2px 0;
+        background-color: #2F2F2F;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        border-radius: 0
+    }
+
+    .brand {
+        margin-top: -10px
+    }
+
+    .custom-select {
+      width: 145px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 100;
+    }
+    p {
+      font-style: italic;
+      font-size: 85%;
+    }
+    .extra-field {
+      display: inline-flex;
+    }
+    .extra-field-input {
+      margin: 10px 40px 10px 40px !important;
+    }
+    .add-field-btn {
+      font-size: 12px;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+    }
+    </style>
+
+    <script>
+    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0); 
+    </script>
+    <script src="js/internationalNBA.js" type="text/javascript" charset="utf-8" async defer></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-static-top navbar-main">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand brand">
+            <a href="https://branchjshek.github.io" target="_blank" class="logo-container">
+              <div class="branch-logo"><img src="https://branch.io/img/logo_white.png" alt="BranchMetrics" title="Branch Metrics"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="panel-header page-header">
+        NBA Team Link Creator
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#basic_fields" aria-expanded="false" aria-controls="other_fields">
+                  Basic Setup
+                </a>
+              </h3>
+            </div>
+            <div id="basic_fields" class="collapse show">
+              <div class="panel-body">
+                  <label>Marketing Title (Required):
+                    <p>Name of the link on the Branch Quick Links dashboard page.</p>
+                    <input type="text" id="marketing_title" class="form-control" value=""/>
+                  </label>
+                  <label>Campaign (Recommended):
+                    <p>What campaign is it part of? (utm_campaign)</p>
+                    <input type="text" id="campaign" class="form-control" value=""/>
+                  </label>
+                  <form>
+                    <label for="channel">Channel (Recommended)</label>
+                    <p>Where will you post this link? (utm_source) - Facebook, Instagram, Twitter, etc.</p>
+                    <select name="channel" id="channel">
+                      <option value="" selected></option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="Instagram Stories">Instagram Stories</option>
+                      <option value="Instagram Bio">Instagram Bio</option>
+                      <option value="Display">Display</option>
+                      <option value="Institutional">Institutional</option>
+                      <option value="Email">Email</option>
+                      <option value="PMB Facebook">PMB Facebook</option>
+                      <option value="PMB Instagram">PMB Instagram</option>
+                      <option value="PMB Twitter">PMB Twitter</option>
+                      <option value="PMB">PMB FBIG</option>
+                    </select>
+                  </form>
+                  <form>
+                    <label for="feature">Feature (Recommended)</label>
+                    <p>What feature will you use this link for? (utm_medium)</p>
+                    <select name="feature" id="feature">
+                      <option value="" selected></option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Paid Marketing">Paid Marketing</option>
+                    </select>
+                  </form>
+                  <br>
+                  <label>Stage (Optional):
+                    <p>Example: home-page</p>
+                    <input type="text" id="stage" class="form-control" value=""/>
+                  </label>
+                  <label>Alias (Optional):
+                    <p>Alias will be appended to the link domain (nba.app.link). For example, if you entered "test_alias",
+                    we would create the following link: "https://nba.app.link/test_alias".
+                    <b>Note: link aliases may not be reused - you will see Error 409 if you attempt to reuse an alias.</b></p>
+                    <input type="text" id="alias" class="form-control" value=""/>
+                  </label>
+                  <form action="" method="get" accept-charset="utf-8">
+                    <label>Web Only?
+                    <p>Should this link bring users to the .com page or into the app?</p>
+                    <select name="webonly" id="webonly">
+                      <option value="" selected></option>
+                      <option value="true">Yes - send users to the .com page</option>
+                      <option value="">No - send users to the in-app page</option>
+                    </select>
+                  </label>
+                  </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#dl_fields" aria-expanded="false" aria-controls="other_fields">
+                  Link Routing
+                </a>
+              </h3>
+            </div>
+            <div id="dl_fields" class="collapse">
+              <div class="panel-body">
+                <label>Canonical URL (Required):
+                  <p>Used for deep linking into the app.</p>
+                  <input type="text" id="canonicalURL" class="form-control" value=""/>
+                </label>
+                <label>Fallback URL (Optional):
+                  <p>If the link is clicked in the US by a user without the app, where should that user go? If no value
+                  is specified, user will be taken to the App/Play Store on iOS/Android, or https://nba.com on desktop.</p>
+                  <input type="text" id="fallback" class="form-control" value=""/>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#add_fields" aria-expanded="false" aria-controls="other_fields">
+                  Additional Fields
+                </a>
+              </h3>
+            </div>
+            <div id="add_fields" class="collapse">
+              <div class="panel-body">
+            <label>Team Name (Optional):
+                    <p>Which team is this link associated with?</p>
+                    <select class="form-control custom-select" id="team_name_selector">
+                      <option value="" selected></option>
+                      <option value="nba">NBA</option>
+                      <optgroup label="East"></optgroup>
+                      <option value="bucks">Bucks</option>
+                      <option value="bulls">Bulls</option>
+                      <option value="cavaliers">Cavaliers</option>
+                      <option value="celtics">Celtics</option>
+                      <option value="hawks">Hawks</option>
+                      <option value="heat">Heat</option>
+                      <option value="hornets">Hornets</option>
+                      <option value="knicks">Knicks</option>
+                      <option value="magic">Magic</option>
+                      <option value="nets">Nets</option>
+                      <option value="pacers">Pacers</option>
+                      <option value="pistons">Pistons</option>
+                      <option value="raptors">Raptors</option>
+                      <option value="sixers">Sixers</option>
+                      <option value="wizards">Wizards</option>
+                      <optgroup label="West"></optgroup>
+                      <option value="blazers">Blazers</option>
+                      <option value="clippers">Clippers</option>
+                      <option value="grizzlies">Grizzlies</option>
+                      <option value="jazz">Jazz</option>
+                      <option value="kings">Kings</option>
+                      <option value="lakers">Lakers</option>
+                      <option value="mavericks">Mavericks</option>
+                      <option value="nuggets">Nuggets</option>
+                      <option value="pelicans">Pelicans</option>
+                      <option value="rockets">Rockets</option>
+                      <option value="spurs">Spurs</option>
+                      <option value="suns">Suns</option>
+                      <option value="thunder">Thunder</option>
+                      <option value="timberwolves">Timberwolves</option>
+                      <option value="warriors">Warriors</option>
+                    </select>
+                  </label>
+                  <label>Content (Optional):
+                    <p>What type of content is this link associated with?</p>
+                    <select class="form-control custom-select" id="content_selector">
+                      <option value="" selected></option>
+                      <option value="player">Player</option>
+                      <option label="gameday">Gameday</option>
+                      <option value="league_pass">League Pass</option>
+                      <option label="interview">Interview</option>
+                      <option label="draft">Draft</option>
+                      <option label="other">[Other]</option>
+                    </select>
+                  </label>
+                  <label>Media (Optional):
+                    <p>What media type is this link associated with?</p>
+                    <select class="form-control custom-select" id="media_selector">
+                      <option value="" selected></option>
+                      <option value="image">Image</option>
+                      <option label="video">Video</option>
+                    </select>
+                  </label>
+                  <label>Time (Optional):
+                    <p>What part of the seaason is this link associated with?</p>
+                    <select class="form-control custom-select" id="time_selector">
+                      <option value="" selected></option>
+                      <option value="off_season">Off Season</option>
+                      <option label="preseason">Preseason</option>
+                      <option value="regular_season">Regular Season</option>
+                      <option label="playoffs">Playoffs</option>
+                      <option label="finals">Finals</option>
+                    </select>
+                  </label>
+                  <label>Date (Optional):
+                    <p>The date will be appended to the link to help distiguish between posts. Please format: <b>ddmmyy</b>. For example, April 10, 2018 would be <b>041018</b>.</p>
+                    <input type="text" id="date" class="form-control" value=""/>
+                  </label>
+                  <!-- <div class="playerNameBox"> -->
+                    <label>Player Name (Optional):
+                      <p>The name of the player in the player post.</p>
+                      <input type="text" id="playerName" class="form-control" value=""/>
+                    </label>
+                  <!-- </div> -->
+                </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#og_fields" aria-expanded="false" aria-controls="other_fields">
+                  Social Media
+                </a>
+              </h3>
+            </div>
+            <div id="og_fields" class="collapse">
+              <div class="panel-body">
+                <label>OG Title (Optional):
+                  <p>Specifies a title to show if the link is posted on social media.</p>
+                  <input type="text" id="$og_title" class="form-control" value=""/>
+                </label>
+                <label>OG Description (Optional):
+                  <p>Specifies a description to show if the link is posted on social media.</p>
+                  <input type="text" id="$og_description" class="form-control" value=""/>
+                </label>
+                <label>OG Image URL (Optional):
+                  <p>Specifies an image to show if the link is posted on social media.</p>
+                  <input type="text" id="$og_image" class="form-control" value=""/>
+                </label>
+                <!-- Image Upload -->
+                <label>OG Video (Optional):
+                  <p>Specifies a video to show if the link is posted on social media.</p>
+                  <input type="text" id="$og_video" class="form-control" value=""/>
+                </label>
+                <label>OG URL (Optional):
+                  <p>Specifies a url to serve as the canonical identifier of the og info.</p>
+                  <input type="text" id="$og_url" class="form-control" value=""/>
+                </label>
+                <label>OG Type (Optional):
+                  <p>Specifies a type of og content (ie article, book, etc.).</p>
+                  <input type="text" id="$og_type" class="form-control" value=""/>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#tags" aria-expanded="false" aria-controls="other_fields">
+                  Tags
+                </a>
+              </h3>
+            </div>
+            <div id="tags" class="collapse">
+              <div class="panel-heading">
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box1" value="@NBA">
+                    <span id="NBATag">@NBA</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box2" value="regions">
+                    <span id="asTag">all star</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box3" value="schedulerelease">
+                    <span id="asdTag">all star draft</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box4" value="appdownload">
+                    <span id="appdownloadTag">appdownload</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box5" value="leaguepass">
+                    <span id="bfTag">black friday</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box6" value="domestic">
+                    <span id="domesticTag">domestic</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box7" value="email">
+                    <span id="emailTag">email</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box8" value="facebook">
+                    <span id="facebookTag">facebook</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box9" value="@NBA">
+                    <span id="finalsTag">finals</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box10" value="domestic">
+                    <span id="hfTag">holiday free trial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box11" value="domestic">
+                    <span id="ilbTag">inlanguagebroadcast</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box12" value="instagrambio">
+                    <span id="instagrambioTag">instagrambio</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box13" value="instagramstories">
+                    <span id="instagramstoriesTag">instagramstories</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box14" value="international">
+                    <span id="internationalTag">international</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box15" value="leaguepass">
+                    <span id="leaguepassTag">leaguepass</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box16" value="marketing">
+                    <span id="marketingTag">marketing</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box17" value="international">
+                    <span id="msfTag">mid season free trial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box18" value="leaguepass">
+                    <span id="nbadraftTag">nbadraft</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box19" value="schedulerelease">
+                    <span id="onsaleTag">onsale</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box20" value="organicsocial">
+                    <span id="organicsocialTag">organicsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box21" value="paidsocial">
+                    <span id="paidsocialTag">paidsocial</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box22" value="schedulerelease">
+                    <span id="playoffsTag">playoffs</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box23" value="schedulerelease">
+                    <span id="preseasonTag">preseason</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box24" value="appdownload">
+                    <span id="rttpTag">race to the playoffs</span>
+                  </label>
+                </form>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box25" value="regions">
+                    <span id="regionsTag">regions</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box26" value="schedulerelease">
+                    <span id="restartTag">restart</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box27" value="schedulerelease">
+                    <span id="schedulereleaseTag">schedulerelease</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box28" value="socialowned">
+                    <span id="socialownedTag">socialowned</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box29" value="@NBA">
+                    <span id="sosTag">sos</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box30" value="international">
+                    <span id="triviaTag">trivia</span>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="box31" value="twitter">
+                    <span id="twitterTag">twitter</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#other_fields" aria-expanded="false" aria-controls="other_fields">
+                  Data - Additional Link Params
+                </a>
+              </h3>
+            </div>
+            <div id="other_fields" class="collapse">
+              <div class="panel-body" id="extra_param_panel_body_dom">
+                <button class="btn btn-info add-field-btn" onclick="addField(this)">Add Additional Link Parameter</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-info" onclick="createLink()">Create Link</button>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <input type="text" id="final_url" class="form-control" value="Link Appears Here" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

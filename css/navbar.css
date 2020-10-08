@@ -1,0 +1,22 @@
+.navbar-brand img {
+    max-height: 40px;
+    justify-content: end;
+  }
+
+  nav.navbar-main {
+    padding: 2px 0;
+    background-color: #2F2F2F;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    border-radius: 0;
+    justify-content: end;
+  }
+
+  .brand {
+    margin-top: -10px
+  }
+
+  .nav-item {
+      font-size: 16px;
+  }

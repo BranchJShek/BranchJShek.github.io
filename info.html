@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JShek Test Site</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- Branch Web SDK -->
+    <script type="text/javascript">
+
+    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId".split(" "), 0);
+
+    // .init call to launch banner
+    branch.init('key_live_boOy006UfmG8sSdAqwNcYmmftyeYrJpc', {
+        metadata: {
+            'page' : 'info'
+        }
+    });
+
+    </script>
+
+    <!-- Hosted Deep Link Data -->
+    <meta name="branch:deeplink:monster_name" content="Pringles"/>
+    <meta name="branch:deeplink:face_index" content="3"/>
+    <meta name="branch:deeplink:body_index" content="3">
+    <meta name="branch:deeplink:color_index" content="3">  
+
+    <style type="text/css" media="screen">
+    	body {
+		  min-height: 1000px;
+		  padding-top: 20px;
+		}
+
+		.tab {
+			font-size: 20px;
+			color: white;
+			text-decoration: underline;
+		}
+    </style>
+
+	</head>
+	
+	<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-fixed-top">
+    <div class="branch-journeys-top" style="display:none;"></div>      
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+    	<a class="py-2 d-none d-md-inline-block tab" href="index.html">Main</a>
+    	<a class="py-2 d-none d-md-inline-block tab" href="about.html">About</a>
+    	<a class="py-2 d-none d-md-inline-block tab" href="info.html">Info</a>
+      </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Info Page</h1>
+        <p class="lead font-weight-normal">
+          <a href="index.html" title="Main">Click here to go to the Main Page.</a>
+        </p>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">About</h2>
+          <p class="lead"><a href="about.html" title="About">Click here to redirect to the About Page.</a></p>
+        </div>
+        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Info</h2>
+          <p class="lead"><a href="info.html" title="Info">Click here to redirect to the Info Page.</a></p>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Docs</h2>
+          <p class="lead"><a href="https://docs.branch.io/" title="Info">Click here to redirect to the Branch docs.</a></p>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+      </div>
+    </div>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://branch.io/journeys/">Journeys</a></li>
+            <li><a class="text-muted" href="https://branch.io/universal-ads/">Universal Ads</a></li>
+            <li><a class="text-muted" href="https://branch.io/universal-email/">Universal Email</a>
+            </li>
+        	<li><a class="text-muted" href="https://branch.io/data-feeds/">Data Feeds</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://branch.io/resources/">Resource Library</a></li>
+            <li><a class="text-muted" href="https://branch.io/resources/case-study/">Case Studies</a></li>
+            <li><a class="text-muted" href="https://branch.io/resources/webinar/">Webinars</a></li>
+            <li><a class="text-muted" href="https://branch.io/resources/white-paper/">White Papers</a></li>
+            <li><a class="text-muted" href="https://blog.branch.io/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://branch.io/contact-sales/">Contact Sales</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+	<!-- Branch javascript -->
+    <script>
+    
+    // Branch listener object that retrieves banner link data and prints it to console
+    var listener = function(event, data) {
+        console.log(event + ' fired at ' + Math.floor(Date.now() / 1000));
+        console.log(data);
+    };
+
+
+    // Listener objects are activated in the Branch instance for specific events via .addListener
+    branch.addListener("willShowJourney", listener);
+    branch.addListener("didShowJourney", listener);
+    branch.addListener("willNotShowJourney", listener);
+    branch.addListener("didClickJourneyCTA", listener);
+    branch.addListener("didClickJourneyClose", listener);
+    branch.addListener("willCloseJourney", listener);
+    branch.addListener("didCloseJourney", listener);
+    branch.addListener("didCallJourneyClose", listener);
+    
+
+    // function to manually launch journey and change banner link data (will NOT launch if banner's dismissal period active)
+    function launchBranchJourney(){
+        var linkData = {
+            campaign: 'campaign cannot be changed',
+            feature: 'feature cannot be changed',
+            channel: 'channel was changed by javascript',
+            stage: 'stage was changed by javascript',
+            tags: ['tag was changed by javascript'],
+            data: {
+                'custom_bool': true,
+                'custom_int (today\s date)': Date.now(),
+                'custom_string (url)': window.location.href,
+                '$journeys_icon_image_url':'https://www.valorebooks.com/campus-life/wp-content/uploads/icon_340.png',
+                '$journeys_button_get_no_app':'changed!',
+                '$journeys_button_get_has_app':'changed!',
+                '$journeys_description':'Description reset by button click'
+            }
+        };
+        branch.setBranchViewData(linkData);
+        //function to launch journey with flags to disable banner animations
+        branch.track('pageview',{},{'disable_entry_animation':true,'disable_exit_animation':true});
+    }
+
+    //function to check if a banner is displaying
+    function doesJourneyExistOnPage() {
+        var elem = document.getElementById("branch-banner-iframe");
+        if (elem) {
+            return true;
+        }
+        return false;
+    }
+
+    // function for button to close journey (will NOT activate template's dismissal period)
+    function closeBranchJourney(){        
+        if(doesJourneyExistOnPage()){
+            //this is the call that closes the journey, with flags that disable the banner animations
+            console.log("closeBranchJourney called");
+            branch.closeJourney(function(err) {});
+        } else {
+            console.log("No Banner on the page");
+        }
+    }
+
+    // function to test deepview function
+    function dataCallback(){
+        console.log(".data() called");
+        branch.data(function(err, data) {
+            console.log(data);
+        });
+    }
+
+    </script>
+
+	</body>
+</html>
