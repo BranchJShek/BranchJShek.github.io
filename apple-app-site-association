@@ -1,53 +1,61 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "R63EM248DP.io.branch.EchoTest",
-                "paths": [
-                    "NOT /e/*",
-                    "*",
-                    "/"
-                ]
-            },
-            {
-                "appID": "R63EM248DP.io.branch.EchoTest",
-                "paths": [
-                    "NOT /e/*",
-                    "*",
-                    "/"
-                ]
-            },
-            {
-                "appIDs": [
-                    "R63EM248DP.io.branch.EchoTest", "R63EM248DP.io.branch.JshekTest"
-                ],
-                "components": [
-                    {
-                        "/": "*",
-                        "comment": "Matches any URL and instructs the system to open it as a Universal link"
-                    },
-                    {
-                        "/": "/",
-                        "comment": "Matches any URL whose path starts with / and instructs the system to open it as a Universal link"
-                    },
-                    {
-                        "/": "/e/*",
-                        "exclude": true,
-                        "comment": "Matches any URL whose path starts with /e/ and instructs the system NOT to open it as a Universal link"
-                    }
-                ]
-            }
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp2",
+        "paths": [
+          "NOT /e/*",
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "GZ5KKWL5SK.com.branch.jshek.Flutter-Test",
+        "paths": [
+          "NOT /e/*",
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp2",
+        "paths": [
+          "NOT /e/*",
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appIDs": [
+          "R63EM248DP.io.branch.jshek"
         ],
-        "appclips": {
-            "apps": [
-                "R63EM248DP.io.branch.EchoTest.Clip"
-            ]
-        },
-        "webcredentials": {
-            "apps": [
-                "R63EM248DP.io.branch.EchoTest.Credential"
-            ]
-        }
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches any URL and instructs the system to open it as a Universal link"
+          },
+          {
+            "/": "/",
+            "comment": "Matches any URL whose path starts with / and instructs the system to open it as a Universal link"
+          },
+          {
+            "/": "/e/*",
+            "exclude": true,
+            "comment": "Matches any URL whose path starts with /e/ and instructs the system NOT to open it as a Universal link"
+          }
+        ]
+      }
+    ],
+    "appclips": {
+      "apps": [
+        "R63EM248DP.io.branch.jshek.test"
+      ]
+    },
+    "webcredentials": {
+      "apps": [
+        "R63EM248DP.io.branch.jshek.Credential"
+      ]
     }
+  }
 }
