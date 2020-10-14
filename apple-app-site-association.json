@@ -1,0 +1,53 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "R63EM248DP.io.branch.EchoTest",
+                "paths": [
+                    "NOT /e/*",
+                    "*",
+                    "/"
+                ]
+            },
+            {
+                "appID": "R63EM248DP.io.branch.EchoTest",
+                "paths": [
+                    "NOT /e/*",
+                    "*",
+                    "/"
+                ]
+            },
+            {
+                "appIDs": [
+                    "R63EM248DP.io.branch.EchoTest", "R63EM248DP.io.branch.JshekTest"
+                ],
+                "components": [
+                    {
+                        "/": "*",
+                        "comment": "Matches any URL and instructs the system to open it as a Universal link"
+                    },
+                    {
+                        "/": "/",
+                        "comment": "Matches any URL whose path starts with / and instructs the system to open it as a Universal link"
+                    },
+                    {
+                        "/": "/e/*",
+                        "exclude": true,
+                        "comment": "Matches any URL whose path starts with /e/ and instructs the system NOT to open it as a Universal link"
+                    }
+                ]
+            }
+        ],
+        "appclips": {
+            "apps": [
+                "R63EM248DP.io.branch.EchoTest.Clip"
+            ]
+        },
+        "webcredentials": {
+            "apps": [
+                "R63EM248DP.io.branch.EchoTest.Credential"
+            ]
+        }
+    }
+}
