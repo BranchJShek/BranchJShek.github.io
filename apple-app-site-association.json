@@ -11,7 +11,7 @@
         ]
       },
       {
-        "appID": "GZ5KKWL5SK.com.branch.jshek.Flutter-Test",
+        "appID": "GZ5KKWL5SK.io.branch.jshek.Flutter-Test",
         "paths": [
           "NOT /e/*",
           "*",
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp2",
+        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp",
         "paths": [
           "NOT /e/*",
           "*",
@@ -28,7 +28,7 @@
       },
       {
         "appIDs": [
-          "R63EM248DP.io.branch.jshek"
+          "GZ5KKWL5SK.io.branch.jshek"
         ],
         "components": [
           {
@@ -49,14 +49,13 @@
     ],
     "appclips": {
       "apps": [
-        "R63EM248DP.io.branch.jshek.test"
+        "GZ5KKWL5SK.io.branch.jshektestapp"
       ]
     },
     "webcredentials": {
       "apps": [
-        "R63EM248DP.io.branch.jshek.Credential"
+        "GZ5KKWL5SK.io.branch.jshek.Credential"
       ]
     }
   }
 }
-
