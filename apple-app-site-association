@@ -59,8 +59,6 @@
     }
   },
   "activitycontinuation": {
-    "apps": [
-      "GZ5KKWL5SK.io.branch.jshek.activitycontinuation"
-    ]
+    "apps": "GZ5KKWL5SK.io.branch.jshek.activitycontinuation"
   }
 }
