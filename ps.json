@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp2",
+        "appID": "R63EM248DP.io.branch.OlegTestApp",
         "paths": [
           "NOT /e/*",
           "*",
@@ -11,7 +11,7 @@
         ]
       },
       {
-        "appID": "GZ5KKWL5SK.io.branch.jshek.Flutter-Test",
+        "appID": "R63EM248DP.io.branch.OlegTestApp",
         "paths": [
           "NOT /e/*",
           "*",
@@ -19,7 +19,23 @@
         ]
       },
       {
-        "appID": "GZ5KKWL5SK.io.branch.jshek.testapp",
+        "appID": "R63EM248DP.io.branch.Master-Proserve-iOS",
+        "paths": [
+          "NOT /e/*",
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "R63EM248DP.io.branch.Master-Proserve-iOS",
+        "paths": [
+          "NOT /e/*",
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "R63EM248DP.io.branch.Master-Proserve-iOS",
         "paths": [
           "NOT /e/*",
           "*",
@@ -28,7 +44,7 @@
       },
       {
         "appIDs": [
-          "GZ5KKWL5SK.io.branch.jshek"
+          "R63EM248DP.io.branch.Master-Proserve-iOS"
         ],
         "components": [
           {
@@ -49,18 +65,8 @@
     ],
     "appclips": {
       "apps": [
-        "GZ5KKWL5SK.io.branch.jshektestapp"
-      ]
-    },
-    "webcredentials": {
-      "apps": [
-        "GZ5KKWL5SK.io.branch.jshek.Credential"
+        "R63EM248DP.io.branch.Master-Proserve-iOS"
       ]
     }
-  },
-  "activitycontinuation": {
-    "apps": [
-      "GZ5KKWL5SK.io.branch.jshek.activitycontinuation"
-    ]
   }
 }
