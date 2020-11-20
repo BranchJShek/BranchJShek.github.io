@@ -48,14 +48,16 @@
       }
     ],
     "appclips": {
-      "apps": [
+      "apps": 
         "GZ5KKWL5SK.io.branch.jshektestapp"
-      ]
     },
     "webcredentials": {
       "apps": [
         "GZ5KKWL5SK.io.branch.jshek.Credential"
       ]
     }
+  },
+  "activitycontinuation": {
+    "apps": ["GZ5KKWL5SK.io.branch.jshek.activitycontinuation"]
   }
 }
